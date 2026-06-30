@@ -1,0 +1,42 @@
+import type { Metadata } from 'next';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import Hero from '@/components/sections/Hero';
+import TrustBar from '@/components/sections/TrustBar';
+import PlatformOverview from '@/components/sections/PlatformOverview';
+import AISection from '@/components/sections/AISection';
+import DashboardSection from '@/components/sections/DashboardSection';
+import Features from '@/components/sections/Features';
+import Integrations from '@/components/sections/Integrations';
+import Security from '@/components/sections/Security';
+import Industries from '@/components/sections/Industries';
+import WhyBarbonOS from '@/components/sections/WhyBarbonOS';
+import CTA from '@/components/sections/CTA';
+
+export const metadata: Metadata = {
+  title: 'Wright — Modern Insurance Infrastructure',
+  description:
+    'Barbon OS is an AI-powered operating system for insurance companies — built for insurers, brokers, bancassurance providers, and embedded insurance businesses.',
+};
+
+export default function HomePage() {
+  return (
+    <>
+      <Navbar />
+      <main id="main-content">
+        <Hero />
+        <TrustBar />
+        <PlatformOverview />
+        <AISection />
+        <DashboardSection />
+        <Features />
+        <Integrations />
+        <Security />
+        <Industries />
+        <WhyBarbonOS />
+        <CTA />
+      </main>
+      <Footer />
+    </>
+  );
+}
