@@ -10,12 +10,12 @@ const services = [
   {
     icon: BarChart3,
     name: 'Underwriting Intelligence',
-    description: 'Structured risk reports built for underwriting decisions — not compliance reports. Actionable, measurable, and continuously updated.',
+    description: 'Structured risk reports built for underwriting decisions - not compliance reports. Actionable, measurable, and continuously updated.',
   },
   {
     icon: Eye,
     name: 'Continuous Cyber Risk Monitoring',
-    description: 'Ongoing surveillance across an organization\'s entire technology environment throughout the policy lifecycle — not just at renewal.',
+    description: 'Ongoing surveillance across an organization\'s entire technology environment throughout the policy lifecycle - not just at renewal.',
   },
   {
     icon: Target,
@@ -25,7 +25,7 @@ const services = [
   {
     icon: AlertTriangle,
     name: 'Threat Intelligence',
-    description: 'Real-time threat feeds correlated against each insured\'s specific environment — surfacing exposure before it becomes a claim.',
+    description: 'Real-time threat feeds correlated against each insured\'s specific environment - surfacing exposure before it becomes a claim.',
   },
   {
     icon: Monitor,
@@ -40,7 +40,7 @@ const services = [
   {
     icon: Users,
     name: 'Vendor Assurance',
-    description: 'Independent validation that cybersecurity vendors are delivering meaningful risk reduction — not just meeting contractual requirements.',
+    description: 'Independent validation that cybersecurity vendors are delivering meaningful risk reduction - not just meeting contractual requirements.',
   },
   {
     icon: Globe,
@@ -50,7 +50,7 @@ const services = [
   {
     icon: Cloud,
     name: 'Cloud Security Validation',
-    description: 'Assessment of cloud environment configurations across AWS, Azure, and Google Cloud — identifying misconfigurations and policy drift.',
+    description: 'Assessment of cloud environment configurations across AWS, Azure, and Google Cloud - identifying misconfigurations and policy drift.',
   },
   {
     icon: Activity,
@@ -60,7 +60,7 @@ const services = [
   {
     icon: Search,
     name: 'Third-Party Risk Reviews',
-    description: 'Evaluation of supply chain and vendor exposure — assessing how third-party risk propagates into the insured\'s environment.',
+    description: 'Evaluation of supply chain and vendor exposure - assessing how third-party risk propagates into the insured\'s environment.',
   },
   {
     icon: BookOpen,
@@ -70,12 +70,12 @@ const services = [
   {
     icon: FileCheck,
     name: 'Compliance Validation',
-    description: 'Independent verification of regulatory and standards compliance — providing insurers with evidence beyond self-attestation.',
+    description: 'Independent verification of regulatory and standards compliance - providing insurers with evidence beyond self-attestation.',
   },
   {
     icon: TrendingUp,
     name: 'Cyber Risk Trend Analysis',
-    description: 'Longitudinal tracking of an organization\'s cyber posture over time — identifying whether risk is improving, stable, or deteriorating.',
+    description: 'Longitudinal tracking of an organization\'s cyber posture over time - identifying whether risk is improving, stable, or deteriorating.',
   },
 ];
 
@@ -101,7 +101,7 @@ export default function PlatformOverview() {
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
             Barbon enables insurers and brokers to confidently issue and manage
-            cyber insurance through continuous technical assessment — replacing
+            cyber insurance through continuous technical assessment - replacing
             the annual questionnaire with ongoing, measurable intelligence.
           </p>
         </div>

@@ -52,8 +52,7 @@ export default function DashboardSection() {
             who decide.
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            Every signal from every corner of an organization&apos;s technology environment —
-            transformed into insurance intelligence. Risk scores, posture trends, and
+            Every signal from every corner of an organization&apos;s technology environment - transformed into insurance intelligence. Risk scores, posture trends, and
             threat indicators in one structured view.
           </p>
         </div>

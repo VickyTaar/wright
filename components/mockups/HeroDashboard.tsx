@@ -30,10 +30,10 @@ const RISK_CFG = {
 } as const;
 
 const ACTIVITIES = [
-  { icon: AlertCircle,  text: 'Credential exposure detected — Meridian Corp',   time: '3m ago',  color: '#dc2626' },
-  { icon: CheckCircle2, text: 'Posture improving — Acacia Holdings (+6 pts)',    time: '9m ago',  color: '#059669' },
-  { icon: Clock,        text: 'Underwriting report generated — ORG-0281',        time: '17m ago', color: '#6b7280' },
-  { icon: CircleDot,    text: 'New AI system detected — Port Logistics Ltd',     time: '24m ago', color: '#0165FC' },
+  { icon: AlertCircle,  text: 'Credential exposure detected - Meridian Corp',   time: '3m ago',  color: '#dc2626' },
+  { icon: CheckCircle2, text: 'Posture improving - Acacia Holdings (+6 pts)',    time: '9m ago',  color: '#059669' },
+  { icon: Clock,        text: 'Underwriting report generated - ORG-0281',        time: '17m ago', color: '#6b7280' },
+  { icon: CircleDot,    text: 'New AI system detected - Port Logistics Ltd',     time: '24m ago', color: '#0165FC' },
 ];
 
 const NAV_ITEMS = [

@@ -14,7 +14,7 @@ const assessmentAreas = [
   {
     icon: CheckCircle2,
     name: 'Reliability Testing',
-    description: 'Systematic testing of AI system performance under stress, edge cases, and degraded conditions — including fail-safe behaviour.',
+    description: 'Systematic testing of AI system performance under stress, edge cases, and degraded conditions - including fail-safe behaviour.',
   },
   {
     icon: AlertTriangle,
@@ -29,7 +29,7 @@ const assessmentAreas = [
   {
     icon: Shield,
     name: 'Tool Permission Audit',
-    description: 'Review of what actions the AI agent is permitted to take autonomously — and whether those boundaries are enforced.',
+    description: 'Review of what actions the AI agent is permitted to take autonomously - and whether those boundaries are enforced.',
   },
   {
     icon: Eye,
@@ -54,7 +54,7 @@ const assessmentAreas = [
   {
     icon: Scale,
     name: 'Compliance Readiness',
-    description: 'Assessment against emerging AI regulatory frameworks — including EU AI Act, NIST AI RMF, and sector-specific requirements.',
+    description: 'Assessment against emerging AI regulatory frameworks - including EU AI Act, NIST AI RMF, and sector-specific requirements.',
   },
   {
     icon: DollarSign,
@@ -85,7 +85,7 @@ export default function Security() {
           </h2>
           <p className="text-[17px] text-[#9ca3af] leading-[1.7]">
             Businesses are rapidly deploying AI agents capable of making autonomous
-            decisions — approving purchases, managing infrastructure, executing
+            decisions - approving purchases, managing infrastructure, executing
             workflows. Yet one question remains unanswered: who bears financial
             responsibility when an AI system independently causes loss? Barbon
             exists to answer that question.
@@ -117,7 +117,7 @@ export default function Security() {
         {/* AI Assurance Index */}
         <div className="border border-[#27272a] rounded-[6px] p-5 bg-[#111113]">
           <p className="text-[11px] font-semibold uppercase tracking-widest text-[#71717a] mb-4">
-            AI Assurance Index — Barbon Scoring Framework
+            AI Assurance Index - Barbon Scoring Framework
           </p>
           <div className="flex flex-wrap gap-3">
             {[

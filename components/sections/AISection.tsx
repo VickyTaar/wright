@@ -4,11 +4,11 @@ import ClaimsAIInterface from '@/components/mockups/ClaimsAIInterface';
 
 const pipeline = [
   { step: '01', label: 'Signal Collection', detail: 'Continuous data ingestion from cloud, identity, email, endpoint, and threat intelligence sources' },
-  { step: '02', label: 'Environment Analysis', detail: 'Full mapping of the insured\'s technology footprint — on-premise, cloud, and SaaS environments' },
+  { step: '02', label: 'Environment Analysis', detail: 'Full mapping of the insured\'s technology footprint - on-premise, cloud, and SaaS environments' },
   { step: '03', label: 'Threat Correlation', detail: 'Active threats correlated against the specific organization\'s exposed attack surface and technology stack' },
   { step: '04', label: 'Posture Scoring', detail: 'Proprietary risk model converts technical findings into an explainable Cyber Risk Score (0–100)' },
-  { step: '05', label: 'Vendor Assurance', detail: 'Independent validation that existing security vendors are reducing risk — not just deployed on paper' },
-  { step: '06', label: 'Underwriting Report', detail: 'Structured intelligence report delivered in the language of underwriting — with recommended actions' },
+  { step: '05', label: 'Vendor Assurance', detail: 'Independent validation that existing security vendors are reducing risk - not just deployed on paper' },
+  { step: '06', label: 'Underwriting Report', detail: 'Structured intelligence report delivered in the language of underwriting - with recommended actions' },
   { step: '07', label: 'Continuous Monitoring', detail: 'Ongoing surveillance flags posture changes, new threats, and material risk shifts throughout the policy term' },
 ];
 

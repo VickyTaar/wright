@@ -6,7 +6,7 @@ import AISection from '@/components/sections/AISection';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Our Approach — Barbon',
+  title: 'Our Approach - Barbon',
   description:
     'Barbon continuously collects technical signals, scores cyber and AI risk, and delivers insurer-grade intelligence. Learn how our approach differs from traditional questionnaire-based underwriting.',
 };
@@ -29,7 +29,7 @@ export default function SecurityPage() {
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
               We continuously collect technical signals from across an organization&apos;s
               environment, correlate them against threat intelligence, and deliver
-              structured underwriting reports that reflect actual posture — not
+              structured underwriting reports that reflect actual posture - not
               self-reported answers to checkbox questions.
             </p>
           </div>

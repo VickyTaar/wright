@@ -8,7 +8,7 @@ const capabilities = [
   {
     icon: Cloud,
     name: 'Microsoft 365 & Azure',
-    description: 'Continuous monitoring of Microsoft cloud environments — identity posture, conditional access, email security, and misconfiguration detection.',
+    description: 'Continuous monitoring of Microsoft cloud environments - identity posture, conditional access, email security, and misconfiguration detection.',
   },
   {
     icon: Cloud,
@@ -18,7 +18,7 @@ const capabilities = [
   {
     icon: Users,
     name: 'Identity Providers',
-    description: 'Continuous review of Okta, Azure AD, and Google Workspace — MFA adoption rates, privileged access, dormant accounts, and sign-in anomalies.',
+    description: 'Continuous review of Okta, Azure AD, and Google Workspace - MFA adoption rates, privileged access, dormant accounts, and sign-in anomalies.',
   },
   {
     icon: Shield,
@@ -43,7 +43,7 @@ const capabilities = [
   {
     icon: Key,
     name: 'Credential Exposure',
-    description: 'Real-time detection of compromised credentials — including employee accounts, service accounts, and third-party integration keys.',
+    description: 'Real-time detection of compromised credentials - including employee accounts, service accounts, and third-party integration keys.',
   },
   {
     icon: RefreshCw,
@@ -58,7 +58,7 @@ const capabilities = [
   {
     icon: HardDrive,
     name: 'Backup Health',
-    description: 'Verification of backup integrity, encryption, offline copies, and recovery testing — critical indicators for ransomware resilience.',
+    description: 'Verification of backup integrity, encryption, offline copies, and recovery testing - critical indicators for ransomware resilience.',
   },
   {
     icon: Monitor,
@@ -109,7 +109,7 @@ export default function Features() {
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
             Our platform continuously collects and analyzes signals from across an
-            organization&apos;s entire technology environment — transforming raw technical
+            organization&apos;s entire technology environment - transforming raw technical
             data into structured underwriting intelligence.
           </p>
         </div>

@@ -7,7 +7,7 @@ import Integrations from '@/components/sections/Integrations';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Cyber Risk Intelligence — Barbon',
+  title: 'Cyber Risk Intelligence - Barbon',
   description:
     'Barbon enables insurers to confidently issue and manage cyber insurance through continuous technical assessment, independent risk scoring, and real-time threat intelligence.',
 };
@@ -29,7 +29,7 @@ export default function PlatformPage() {
               for cyber underwriting.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              Barbon evaluates organizations throughout the policy lifecycle — not just at
+              Barbon evaluates organizations throughout the policy lifecycle - not just at
               renewal. Our platform continuously collects technical signals, scores cyber
               risk, and delivers insurer-grade intelligence that supports confident
               underwriting decisions.

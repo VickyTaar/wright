@@ -8,7 +8,7 @@ const steps = [
     id: 'mapping',
     icon: ScanLine,
     label: 'Environment Mapping',
-    detail: 'ORG-2024-0291 — TechCorp Holdings',
+    detail: 'ORG-2024-0291 - TechCorp Holdings',
     sub: 'Azure · Microsoft 365 · AWS · 14 connected systems',
     status: 'done',
     color: '#0165FC',
@@ -119,7 +119,7 @@ export default function ClaimsAIInterface() {
       <div className="px-4 py-3 border-b border-[#e5e7eb] bg-white">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-[13px] font-semibold text-[#0a0a0b]">TechCorp Holdings — Cyber Risk Assessment</p>
+            <p className="text-[13px] font-semibold text-[#0a0a0b]">TechCorp Holdings - Cyber Risk Assessment</p>
             <p className="text-[11px] text-[#9ca3af]">Initiated 14 Jun 2024 · Mid-Market · Cyber Liability Renewal</p>
           </div>
           <span className="text-[10px] px-2 py-1 bg-[#fef2f2] text-[#dc2626] border border-[#fecaca] rounded-[4px] font-medium">Elevated Risk</span>

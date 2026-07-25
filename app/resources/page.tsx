@@ -6,9 +6,9 @@ import CTA from '@/components/sections/CTA';
 import { ArrowRight, FileText, BookOpen, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Insights — Barbon',
+  title: 'Insights - Barbon',
   description:
-    'Frameworks, guides, and technical intelligence from Barbon — covering cyber risk underwriting, AI risk assurance, vendor assurance methodology, and continuous monitoring.',
+    'Frameworks, guides, and technical intelligence from Barbon - covering cyber risk underwriting, AI risk assurance, vendor assurance methodology, and continuous monitoring.',
 };
 
 const resources = [
@@ -16,21 +16,21 @@ const resources = [
     type: 'Guide',
     icon: BookOpen,
     title: 'Cyber Insurance Underwriting in the Age of Continuous Risk',
-    description: 'How continuous technical assessment changes the underwriting model — and why annual questionnaires are no longer sufficient for modern cyber risk.',
+    description: 'How continuous technical assessment changes the underwriting model - and why annual questionnaires are no longer sufficient for modern cyber risk.',
     href: '/resources/cyber-underwriting-guide',
   },
   {
     type: 'Framework',
     icon: FileText,
     title: 'AI Risk Assurance Framework',
-    description: 'Barbon\'s structured methodology for independently evaluating autonomous AI systems — covering security, governance, reliability, and financial exposure.',
+    description: 'Barbon\'s structured methodology for independently evaluating autonomous AI systems - covering security, governance, reliability, and financial exposure.',
     href: '/resources/ai-risk-framework',
   },
   {
     type: 'Guide',
     icon: BookOpen,
     title: 'Vendor Assurance Methodology',
-    description: 'How Barbon independently validates whether cybersecurity vendors are reducing organizational risk — not just fulfilling contractual requirements.',
+    description: 'How Barbon independently validates whether cybersecurity vendors are reducing organizational risk - not just fulfilling contractual requirements.',
     href: '/resources/vendor-assurance',
   },
   {
@@ -44,14 +44,14 @@ const resources = [
     type: 'Framework',
     icon: FileText,
     title: 'Cyber Risk Scoring Methodology',
-    description: 'The technical specification behind Barbon\'s proprietary Cyber Risk Score — inputs, weightings, model assumptions, and interpretation guidance.',
+    description: 'The technical specification behind Barbon\'s proprietary Cyber Risk Score - inputs, weightings, model assumptions, and interpretation guidance.',
     href: '/resources/risk-scoring',
   },
   {
     type: 'Guide',
     icon: BookOpen,
     title: 'AI Governance for Insurance Underwriters',
-    description: 'A practical guide for underwriters evaluating AI risk — covering governance frameworks, regulatory landscape, and assessment criteria.',
+    description: 'A practical guide for underwriters evaluating AI risk - covering governance frameworks, regulatory landscape, and assessment criteria.',
     href: '/resources/ai-governance-guide',
   },
 ];

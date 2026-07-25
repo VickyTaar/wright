@@ -14,7 +14,7 @@ import WhyBarbonOS from '@/components/sections/WhyBarbonOS';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Barbon — Technology Risk Intelligence for Insurance',
+  title: 'Barbon - Technology Risk Intelligence for Insurance',
   description:
     'Barbon enables insurers to confidently underwrite cyber and AI risks through continuous technical assessment, real-time risk intelligence, and independent validation. We make technology risk measurable.',
 };

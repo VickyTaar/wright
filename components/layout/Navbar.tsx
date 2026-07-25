@@ -48,7 +48,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          aria-label="Barbon Insurance Technologies — Home"
+          aria-label="Barbon Insurance Technologies - Home"
           className="flex items-center gap-2 group"
         >
           <div className="flex items-center gap-2">

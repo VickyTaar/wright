@@ -40,14 +40,13 @@ export default function DemoPage() {
                   in your context.
                 </h1>
                 <p className="text-[16px] text-[#6b7280] leading-[1.7] mb-8 max-w-md">
-                  A focused product walkthrough with a member of our team —
-                  configured around your business model, your lines, and your
+                  A focused product walkthrough with a member of our team - configured around your business model, your lines, and your
                   operational requirements.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   {[
-                    { step: '01', text: 'Submit your request — we respond within one business day.' },
+                    { step: '01', text: 'Submit your request - we respond within one business day.' },
                     { step: '02', text: 'A brief discovery call to understand your business.' },
                     { step: '03', text: 'A focused product demo, live, with your team.' },
                     { step: '04', text: 'A follow-up environment configured for your evaluation.' },

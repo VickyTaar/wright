@@ -105,7 +105,7 @@ export default function Integrations() {
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
             Our platform aggregates intelligence from every layer of an organization&apos;s
-            digital infrastructure — cloud platforms, identity providers, endpoint
+            digital infrastructure - cloud platforms, identity providers, endpoint
             protection, threat intelligence feeds, and beyond.
           </p>
         </div>
@@ -145,7 +145,7 @@ export default function Integrations() {
         <div className="mt-8 p-4 border border-[#e5e7eb] rounded-[6px] bg-[#f7f8fa] flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <div className="flex items-center gap-2">
             <Shield size={14} className="text-[#0165FC]" />
-            <span className="text-[13px] font-semibold text-[#0a0a0b]">Secure read-only access — no business disruption</span>
+            <span className="text-[13px] font-semibold text-[#0a0a0b]">Secure read-only access - no business disruption</span>
           </div>
           <div className="sm:ml-auto font-mono text-[11px] text-[#6b7280] bg-white border border-[#e5e7eb] px-3 py-1.5 rounded-[4px]">
             GET /api/v1/organizations/{'{'}orgId{'}'}/risk-score

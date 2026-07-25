@@ -67,7 +67,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
             >
-              Barbon continuously measures cyber and AI risk — providing insurers
+              Barbon continuously measures cyber and AI risk - providing insurers
               with the real-time intelligence needed to underwrite modern
               technology with confidence.
             </motion.p>

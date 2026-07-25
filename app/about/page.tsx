@@ -4,23 +4,23 @@ import Footer from '@/components/layout/Footer';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'About — Barbon Insurance Technologies',
+  title: 'About - Barbon Insurance Technologies',
   description:
-    'Barbon Insurance Technologies is a Technology Risk Intelligence company. We sit between cybersecurity, artificial intelligence, and insurance — making emerging technology insurable.',
+    'Barbon Insurance Technologies is a Technology Risk Intelligence company. We sit between cybersecurity, artificial intelligence, and insurance - making emerging technology insurable.',
 };
 
 const values = [
   {
     name: 'Independent by design.',
-    description: 'We are not a cybersecurity vendor. We are not an insurer. We have no commercial relationship with the technologies we assess — which means our intelligence is always objective, and our incentives always align with accuracy.',
+    description: 'We are not a cybersecurity vendor. We are not an insurer. We have no commercial relationship with the technologies we assess - which means our intelligence is always objective, and our incentives always align with accuracy.',
   },
   {
     name: 'Continuous, not annual.',
-    description: 'Technology risk changes every day. An annual questionnaire cannot reflect reality. Our platform monitors continuously — so insurers have current intelligence, not last year\'s snapshot.',
+    description: 'Technology risk changes every day. An annual questionnaire cannot reflect reality. Our platform monitors continuously - so insurers have current intelligence, not last year\'s snapshot.',
   },
   {
     name: 'Intelligence, not compliance.',
-    description: 'Compliance frameworks tell you whether controls exist. We tell you whether they are working — and whether they are actually reducing the probability of a loss. Those are very different questions.',
+    description: 'Compliance frameworks tell you whether controls exist. We tell you whether they are working - and whether they are actually reducing the probability of a loss. Those are very different questions.',
   },
   {
     name: 'Insurers first.',
@@ -46,8 +46,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
               Barbon Insurance Technologies is a Technology Risk Intelligence company.
-              We sit between cybersecurity, artificial intelligence, and insurance —
-              helping insurers understand, measure, and continuously manage the risks
+              We sit between cybersecurity, artificial intelligence, and insurance - helping insurers understand, measure, and continuously manage the risks
               that define modern digital operations.
             </p>
           </div>
@@ -80,7 +79,7 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Our mission is to become the global trust layer between technology and
-                    insurance — enabling the confident underwriting of digital systems that
+                    insurance - enabling the confident underwriting of digital systems that
                     evolve faster than traditional models can assess.
                   </p>
                 </div>

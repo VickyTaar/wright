@@ -2,12 +2,12 @@ const comparisons = [
   {
     dimension: 'Assessment Frequency',
     legacy: 'Annual questionnaire completed at renewal. Posture changes throughout the year go undetected until the next cycle.',
-    barbon: 'Continuous monitoring across the entire policy lifecycle. Material risk changes flagged in real time — not twelve months later.',
+    barbon: 'Continuous monitoring across the entire policy lifecycle. Material risk changes flagged in real time - not twelve months later.',
   },
   {
     dimension: 'Intelligence Source',
     legacy: 'Self-reported answers from insured organizations. No independent verification of the accuracy or completeness of responses.',
-    barbon: 'Independent technical assessment of the actual environment. Validated against live infrastructure — not self-attestation.',
+    barbon: 'Independent technical assessment of the actual environment. Validated against live infrastructure - not self-attestation.',
   },
   {
     dimension: 'Risk Measurement',
@@ -22,12 +22,12 @@ const comparisons = [
   {
     dimension: 'Vendor Validation',
     legacy: 'Security vendors listed on questionnaires taken at face value. No verification of effective implementation or actual risk reduction.',
-    barbon: 'Independent validation of every major security vendor — confirming effective deployment, correct configuration, and genuine risk reduction.',
+    barbon: 'Independent validation of every major security vendor - confirming effective deployment, correct configuration, and genuine risk reduction.',
   },
   {
     dimension: 'Underwriting Confidence',
     legacy: 'Underwriting decisions made on incomplete, unverified, and potentially outdated information about the insured\'s true posture.',
-    barbon: 'Underwriting decisions supported by continuous, independently verified technical intelligence — reducing adverse selection and surprise losses.',
+    barbon: 'Underwriting decisions supported by continuous, independently verified technical intelligence - reducing adverse selection and surprise losses.',
   },
 ];
 

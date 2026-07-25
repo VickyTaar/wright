@@ -5,9 +5,9 @@ import Security from '@/components/sections/Security';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'AI Risk Assurance — Barbon',
+  title: 'AI Risk Assurance - Barbon',
   description:
-    'Barbon independently evaluates AI systems before deployment and continuously monitors them once live — providing insurers with the technical confidence needed to underwrite autonomous AI risk.',
+    'Barbon independently evaluates AI systems before deployment and continuously monitors them once live - providing insurers with the technical confidence needed to underwrite autonomous AI risk.',
 };
 
 export default function AIPage() {
@@ -42,12 +42,12 @@ export default function AIPage() {
           <div className="container-site">
             <div className="max-w-2xl mb-12">
               <h2 className="text-[32px] font-bold tracking-[-0.02em] text-[#0a0a0b] mb-4">
-                Continuous AI monitoring — once deployed
+                Continuous AI monitoring - once deployed
               </h2>
               <p className="text-[17px] text-[#6b7280] leading-[1.7]">
                 Our assessment does not end at deployment. Once an AI system is operational,
                 Barbon continuously monitors for changes that may materially alter the risk
-                profile — detecting increasing operational risk before financial loss occurs.
+                profile - detecting increasing operational risk before financial loss occurs.
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden">

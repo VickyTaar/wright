@@ -5,9 +5,9 @@ import Industries from '@/components/sections/Industries';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Who We Serve — Barbon',
+  title: 'Who We Serve - Barbon',
   description:
-    'Barbon serves insurers, brokers, MGAs, enterprise organizations, technology providers, and financial institutions — providing technology risk intelligence across the insurance ecosystem.',
+    'Barbon serves insurers, brokers, MGAs, enterprise organizations, technology providers, and financial institutions - providing technology risk intelligence across the insurance ecosystem.',
 };
 
 export default function SolutionsPage() {
@@ -28,7 +28,7 @@ export default function SolutionsPage() {
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
               From insurers and brokers to enterprise organizations and AI system
-              developers — Barbon provides the independent technical intelligence
+              developers - Barbon provides the independent technical intelligence
               each stakeholder needs to navigate the technology risk landscape with
               measurable confidence.
             </p>
