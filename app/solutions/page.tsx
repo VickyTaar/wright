@@ -5,9 +5,9 @@ import Industries from '@/components/sections/Industries';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Solutions — Barbon OS',
+  title: 'Who We Serve — Barbon',
   description:
-    'Barbon OS powers general insurance, health, life, agriculture, marine, bancassurance, microinsurance, and employee benefits operations.',
+    'Barbon serves insurers, brokers, MGAs, enterprise organizations, technology providers, and financial institutions — providing technology risk intelligence across the insurance ecosystem.',
 };
 
 export default function SolutionsPage() {
@@ -19,16 +19,18 @@ export default function SolutionsPage() {
         <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
           <div className="container-site">
             <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-              Solutions
+              Who We Serve
             </p>
             <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
-              Purpose-built for every
+              Technology intelligence for
               <br />
-              insurance vertical.
+              every stakeholder.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              From general insurers to microinsurance platforms — Barbon OS is
-              configured for your specific model, not adapted from a generic template.
+              From insurers and brokers to enterprise organizations and AI system
+              developers — Barbon provides the independent technical intelligence
+              each stakeholder needs to navigate the technology risk landscape with
+              measurable confidence.
             </p>
           </div>
         </div>

@@ -1,79 +1,79 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { CheckCircle2, AlertTriangle, FileSearch, Calculator, ShieldAlert, Scale, GitBranch, Loader2 } from 'lucide-react';
+import { CheckCircle2, AlertTriangle, ScanLine, BarChart3, ShieldAlert, FileText, GitBranch, Loader2 } from 'lucide-react';
 
 const steps = [
   {
-    id: 'upload',
-    icon: FileSearch,
-    label: 'Document Ingestion',
-    detail: 'Claim #CLM-2024-8840 received',
-    sub: '14 documents · PDF, XLSX, JPG',
+    id: 'mapping',
+    icon: ScanLine,
+    label: 'Environment Mapping',
+    detail: 'ORG-2024-0291 — TechCorp Holdings',
+    sub: 'Azure · Microsoft 365 · AWS · 14 connected systems',
     status: 'done',
     color: '#0165FC',
   },
   {
-    id: 'extract',
-    icon: FileSearch,
-    label: 'AI Extraction',
-    detail: 'Structured data extracted',
-    sub: 'Policy terms · Incident report · Photos',
+    id: 'signals',
+    icon: BarChart3,
+    label: 'Signal Collection',
+    detail: '1,847 signals ingested',
+    sub: 'Identity · Endpoint · Cloud Posture · Email · Threat Feeds',
     status: 'done',
     color: '#0165FC',
   },
   {
-    id: 'inconsistencies',
+    id: 'threats',
     icon: AlertTriangle,
-    label: 'Inconsistency Detection',
-    detail: '2 discrepancies identified',
-    sub: 'Date mismatch · Location variance',
+    label: 'Threat Intelligence',
+    detail: '3 active threat indicators',
+    sub: 'Credential exposure · Phishing campaign · Lateral movement patterns',
     status: 'warning',
     color: '#b45309',
   },
   {
-    id: 'assessment',
-    icon: Calculator,
-    label: 'Preliminary Assessment',
-    detail: 'Estimated loss: $82,500',
-    sub: 'Confidence: 94.2%',
-    status: 'done',
-    color: '#0165FC',
-  },
-  {
-    id: 'fraud',
+    id: 'posture',
     icon: ShieldAlert,
-    label: 'Fraud Risk Analysis',
-    detail: 'Risk score: 0.71 / 1.0',
-    sub: 'Elevated · Requires adjuster review',
+    label: 'Posture Analysis',
+    detail: 'Cyber Risk Score: 54 / 100',
+    sub: 'MFA gaps · Unpatched endpoints · Misconfigured cloud storage',
     status: 'risk',
     color: '#dc2626',
   },
   {
-    id: 'settlement',
-    icon: Scale,
-    label: 'Settlement Recommendation',
-    detail: 'Suggested: $71,200',
-    sub: 'After deductibles and exclusions',
+    id: 'vendor',
+    icon: CheckCircle2,
+    label: 'Vendor Assurance',
+    detail: '6 security vendors validated',
+    sub: 'EDR · SIEM · Email Gateway · PAM · WAF · Backup',
+    status: 'done',
+    color: '#0165FC',
+  },
+  {
+    id: 'report',
+    icon: FileText,
+    label: 'Underwriting Intelligence',
+    detail: 'Risk report generated',
+    sub: 'Confidence: 96.1% · Incident probability: Elevated',
     status: 'done',
     color: '#0165FC',
   },
   {
     id: 'routing',
     icon: GitBranch,
-    label: 'Approval Routing',
-    detail: 'Routed to Senior Adjuster',
-    sub: 'A. Kamara · Priority: High',
+    label: 'Insurer Delivery',
+    detail: 'Routed to underwriting team',
+    sub: 'S. Patel · Priority: High · Premium adjustment recommended',
     status: 'active',
     color: '#0165FC',
   },
 ];
 
 const statusIcon = {
-  done: <CheckCircle2 size={13} className="text-[#059669]" />,
+  done:    <CheckCircle2 size={13} className="text-[#059669]" />,
   warning: <AlertTriangle size={13} className="text-[#b45309]" />,
-  risk: <AlertTriangle size={13} className="text-[#dc2626]" />,
-  active: <Loader2 size={13} className="text-[#0165FC] animate-spin" />,
+  risk:    <AlertTriangle size={13} className="text-[#dc2626]" />,
+  active:  <Loader2 size={13} className="text-[#0165FC] animate-spin" />,
 };
 
 export default function ClaimsAIInterface() {
@@ -86,7 +86,6 @@ export default function ClaimsAIInterface() {
       }, 800);
       return () => clearTimeout(timer);
     } else {
-      // Restart the animation loop
       const resetTimer = setTimeout(() => {
         setVisibleCount(0);
       }, 4000);
@@ -107,23 +106,23 @@ export default function ClaimsAIInterface() {
               <path d="M1 2h8M1 5h5M1 8h6" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
           </div>
-          <span className="text-[12px] font-semibold text-[#0a0a0b]">AI Claims Assistant</span>
+          <span className="text-[12px] font-semibold text-[#0a0a0b]">Risk Assessment Engine</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="text-[10px] text-[#9ca3af]">Claim</span>
-          <span className="text-[10px] font-mono font-medium text-[#0a0a0b]">CLM-2024-8840</span>
+          <span className="text-[10px] text-[#9ca3af]">Assessment</span>
+          <span className="text-[10px] font-mono font-medium text-[#0a0a0b]">ORG-2024-0291</span>
           <span className="w-2 h-2 rounded-full bg-[#0165FC] animate-pulse" />
         </div>
       </div>
 
-      {/* Claim info */}
+      {/* Org info */}
       <div className="px-4 py-3 border-b border-[#e5e7eb] bg-white">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-[13px] font-semibold text-[#0a0a0b]">Meridian Corp — Property Damage</p>
-            <p className="text-[11px] text-[#9ca3af]">Submitted 14 Jun 2024 · Commercial Property · LOB: Fire & Allied</p>
+            <p className="text-[13px] font-semibold text-[#0a0a0b]">TechCorp Holdings — Cyber Risk Assessment</p>
+            <p className="text-[11px] text-[#9ca3af]">Initiated 14 Jun 2024 · Mid-Market · Cyber Liability Renewal</p>
           </div>
-          <span className="text-[10px] px-2 py-1 bg-[#fef2f2] text-[#dc2626] border border-[#fecaca] rounded-[4px] font-medium">High Risk</span>
+          <span className="text-[10px] px-2 py-1 bg-[#fef2f2] text-[#dc2626] border border-[#fecaca] rounded-[4px] font-medium">Elevated Risk</span>
         </div>
       </div>
 
@@ -183,11 +182,11 @@ export default function ClaimsAIInterface() {
         <div className="px-4 pb-4">
           <div className="border border-[#e5e7eb] rounded-[6px] p-3 flex items-center justify-between bg-[#f7f8fa]">
             <div>
-              <p className="text-[11px] font-semibold text-[#0a0a0b]">Ready for adjuster review</p>
-              <p className="text-[10px] text-[#9ca3af]">AI processing complete · 23s</p>
+              <p className="text-[11px] font-semibold text-[#0a0a0b]">Risk report ready for underwriter</p>
+              <p className="text-[10px] text-[#9ca3af]">Assessment complete · 31s · Premium review recommended</p>
             </div>
             <button type="button" className="text-[10px] bg-[#0165FC] text-white px-3 py-1.5 rounded-[4px] font-medium">
-              Assign →
+              Review →
             </button>
           </div>
         </div>

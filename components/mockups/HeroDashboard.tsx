@@ -3,24 +3,24 @@
 import { useEffect, useState, useRef } from 'react';
 import {
   TrendingUp, TrendingDown, Bell, Search, Settings,
-  LayoutDashboard, FileText, Users, ShieldCheck, BarChart3,
+  LayoutDashboard, ShieldCheck, Brain, BarChart3,
   ChevronRight, AlertCircle, CheckCircle2, Clock, CircleDot,
 } from 'lucide-react';
 
 /* ─── Static data ─────────────────────────────────────── */
 
-const ALL_CLAIMS = [
-  { id: 'CLM-2024-8841', type: 'Motor',    insured: 'Acacia Holdings',   amount: '$14,200',  status: 'review',   risk: 'low'    },
-  { id: 'CLM-2024-8840', type: 'Property', insured: 'Meridian Corp',     amount: '$82,500',  status: 'pending',  risk: 'high'   },
-  { id: 'CLM-2024-8838', type: 'Health',   insured: 'J. Mensah',         amount: '$3,100',   status: 'approved', risk: 'low'    },
-  { id: 'CLM-2024-8835', type: 'Marine',   insured: 'Port Logistics Ltd', amount: '$220,000', status: 'review',   risk: 'medium' },
-  { id: 'CLM-2024-8834', type: 'Motor',    insured: 'Rho Transport',     amount: '$9,800',   status: 'approved', risk: 'low'    },
+const ALL_ORGS = [
+  { id: 'ORG-2024-0291', name: 'Acacia Holdings Ltd',     sector: 'Financial',    score: '82 / 100',  status: 'stable',   risk: 'low'    },
+  { id: 'ORG-2024-0287', name: 'Meridian Corp',            sector: 'Technology',   score: '54 / 100',  status: 'elevated', risk: 'high'   },
+  { id: 'ORG-2024-0281', name: 'Rho Transport Group',      sector: 'Logistics',    score: '71 / 100',  status: 'stable',   risk: 'medium' },
+  { id: 'ORG-2024-0276', name: 'Port Logistics Ltd',       sector: 'Maritime',     score: '48 / 100',  status: 'critical', risk: 'high'   },
+  { id: 'ORG-2024-0264', name: 'Greenfield Holdings',      sector: 'Real Estate',  score: '89 / 100',  status: 'stable',   risk: 'low'    },
 ];
 
 const STATUS_CFG = {
-  review:   { label: 'In Review', color: 'bg-[#fffbeb] text-[#b45309]' },
-  pending:  { label: 'Pending',   color: 'bg-[#fef2f2] text-[#dc2626]' },
-  approved: { label: 'Approved',  color: 'bg-[#ecfdf5] text-[#059669]' },
+  stable:   { label: 'Stable',   color: 'bg-[#ecfdf5] text-[#059669]' },
+  elevated: { label: 'Elevated', color: 'bg-[#fffbeb] text-[#b45309]' },
+  critical: { label: 'Critical', color: 'bg-[#fef2f2] text-[#dc2626]' },
 } as const;
 
 const RISK_CFG = {
@@ -30,89 +30,84 @@ const RISK_CFG = {
 } as const;
 
 const ACTIVITIES = [
-  { icon: CheckCircle2, text: 'Policy #POL-48291 renewed',      time: '2m ago',  color: '#059669' },
-  { icon: AlertCircle,  text: 'High-risk claim flagged by AI',  time: '8m ago',  color: '#dc2626' },
-  { icon: Clock,        text: 'Underwriting report generated',  time: '15m ago', color: '#6b7280' },
-  { icon: CircleDot,    text: 'New broker portal submission',   time: '22m ago', color: '#0165FC' },
+  { icon: AlertCircle,  text: 'Credential exposure detected — Meridian Corp',   time: '3m ago',  color: '#dc2626' },
+  { icon: CheckCircle2, text: 'Posture improving — Acacia Holdings (+6 pts)',    time: '9m ago',  color: '#059669' },
+  { icon: Clock,        text: 'Underwriting report generated — ORG-0281',        time: '17m ago', color: '#6b7280' },
+  { icon: CircleDot,    text: 'New AI system detected — Port Logistics Ltd',     time: '24m ago', color: '#0165FC' },
 ];
 
 const NAV_ITEMS = [
-  { icon: LayoutDashboard, label: 'Dashboard', active: true },
-  { icon: FileText,        label: 'Policies'  },
-  { icon: ShieldCheck,     label: 'Claims'    },
-  { icon: Users,           label: 'Customers' },
-  { icon: BarChart3,       label: 'Analytics' },
+  { icon: LayoutDashboard, label: 'Dashboard',    active: true },
+  { icon: ShieldCheck,     label: 'Risk Register' },
+  { icon: AlertCircle,     label: 'Cyber Signals' },
+  { icon: Brain,           label: 'AI Assurance'  },
+  { icon: BarChart3,       label: 'Analytics'     },
 ];
 
 const MONTHS = ['Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun'];
 
 /* ─── Animation frames ────────────────────────────────── */
 
-// Each "frame" represents a snapshot the animation cycles through.
 type Frame = {
   metrics: { label: string; value: string; change: string; trend: 'up' | 'down' }[];
-  bars: number[];          // 12 bar heights (0–100)
-  claimCount: number;      // how many claims to show in queue
-  activityCount: number;   // how many activity rows to show
-  highlight: number | null; // which metric card is highlighted (-1 = none)
+  bars: number[];
+  orgCount: number;
+  activityCount: number;
+  highlight: number | null;
 };
 
 const FRAMES: Frame[] = [
-  // Frame 0 — initial load (sparse)
   {
     metrics: [
-      { label: 'Active Policies', value: '24,819', change: '+3.2%', trend: 'up' },
-      { label: 'Premium (MTD)',   value: '$4.2M',  change: '+8.1%', trend: 'up' },
-      { label: 'Open Claims',     value: '1,247',  change: '-5.4%', trend: 'down' },
-      { label: 'Loss Ratio',      value: '58.3%',  change: '-1.1pp', trend: 'down' },
+      { label: 'Portfolio Risk Score',  value: '74 / 100', change: '+4.1pts', trend: 'up'   },
+      { label: 'Monitored Orgs',        value: '142',       change: '+8.2%',  trend: 'up'   },
+      { label: 'Active Threat Signals', value: '1,847',     change: '-12.3%', trend: 'down' },
+      { label: 'Posture Improving',     value: '68.4%',     change: '+5.2pp', trend: 'up'   },
     ],
     bars: [42, 68, 55, 78, 62, 85, 71, 90, 76, 88, 94, 82],
-    claimCount: 2,
+    orgCount: 2,
     activityCount: 1,
     highlight: 0,
   },
-  // Frame 1 — more data, chart updates
   {
     metrics: [
-      { label: 'Active Policies', value: '24,836', change: '+3.3%', trend: 'up' },
-      { label: 'Premium (MTD)',   value: '$4.3M',  change: '+9.0%', trend: 'up' },
-      { label: 'Open Claims',     value: '1,241',  change: '-5.9%', trend: 'down' },
-      { label: 'Loss Ratio',      value: '57.9%',  change: '-1.5pp', trend: 'down' },
+      { label: 'Portfolio Risk Score',  value: '75 / 100', change: '+4.8pts', trend: 'up'   },
+      { label: 'Monitored Orgs',        value: '144',       change: '+9.0%',  trend: 'up'   },
+      { label: 'Active Threat Signals', value: '1,821',     change: '-13.7%', trend: 'down' },
+      { label: 'Posture Improving',     value: '69.1%',     change: '+5.9pp', trend: 'up'   },
     ],
     bars: [42, 68, 55, 78, 62, 85, 71, 90, 76, 88, 94, 96],
-    claimCount: 3,
+    orgCount: 3,
     activityCount: 2,
     highlight: 1,
   },
-  // Frame 2 — full queue, new activity
   {
     metrics: [
-      { label: 'Active Policies', value: '24,836', change: '+3.3%', trend: 'up' },
-      { label: 'Premium (MTD)',   value: '$4.3M',  change: '+9.0%', trend: 'up' },
-      { label: 'Open Claims',     value: '1,235',  change: '-6.3%', trend: 'down' },
-      { label: 'Loss Ratio',      value: '57.9%',  change: '-1.5pp', trend: 'down' },
+      { label: 'Portfolio Risk Score',  value: '75 / 100', change: '+4.8pts', trend: 'up'   },
+      { label: 'Monitored Orgs',        value: '144',       change: '+9.0%',  trend: 'up'   },
+      { label: 'Active Threat Signals', value: '1,809',     change: '-14.4%', trend: 'down' },
+      { label: 'Posture Improving',     value: '69.1%',     change: '+5.9pp', trend: 'up'   },
     ],
     bars: [42, 68, 55, 78, 62, 85, 71, 90, 76, 88, 94, 99],
-    claimCount: 5,
+    orgCount: 5,
     activityCount: 3,
     highlight: 2,
   },
-  // Frame 3 — all activity visible, steady state
   {
     metrics: [
-      { label: 'Active Policies', value: '24,851', change: '+3.4%', trend: 'up' },
-      { label: 'Premium (MTD)',   value: '$4.3M',  change: '+9.0%', trend: 'up' },
-      { label: 'Open Claims',     value: '1,230',  change: '-6.7%', trend: 'down' },
-      { label: 'Loss Ratio',      value: '57.7%',  change: '-1.7pp', trend: 'down' },
+      { label: 'Portfolio Risk Score',  value: '76 / 100', change: '+5.1pts', trend: 'up'   },
+      { label: 'Monitored Orgs',        value: '147',       change: '+9.7%',  trend: 'up'   },
+      { label: 'Active Threat Signals', value: '1,794',     change: '-15.1%', trend: 'down' },
+      { label: 'Posture Improving',     value: '70.3%',     change: '+7.1pp', trend: 'up'   },
     ],
     bars: [42, 68, 55, 78, 62, 85, 71, 90, 76, 88, 94, 99],
-    claimCount: 5,
+    orgCount: 5,
     activityCount: 4,
     highlight: 3,
   },
 ];
 
-const FRAME_DURATION = 2200; // ms per frame
+const FRAME_DURATION = 2200;
 
 /* ─── Component ───────────────────────────────────────── */
 
@@ -132,7 +127,7 @@ export default function HeroDashboard() {
   }, []);
 
   const frame = FRAMES[frameIndex];
-  void prevIndex; // suppress unused warning
+  void prevIndex;
 
   return (
     <div
@@ -152,7 +147,7 @@ export default function HeroDashboard() {
                   <path d="M2 3h8M2 6h5M2 9h6" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </div>
-              <span className="text-[12px] font-semibold text-[#0a0a0b]">Barbon OS</span>
+              <span className="text-[12px] font-semibold text-[#0a0a0b]">Barbon</span>
             </div>
           </div>
 
@@ -176,9 +171,9 @@ export default function HeroDashboard() {
           {/* User */}
           <div className="mt-auto p-3 border-t border-[#e5e7eb]">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-[#0165FC] flex items-center justify-center text-white text-[9px] font-bold">AK</div>
+              <div className="w-6 h-6 rounded-full bg-[#0165FC] flex items-center justify-center text-white text-[9px] font-bold">SP</div>
               <div>
-                <p className="text-[10px] font-medium text-[#0a0a0b]">A. Kamara</p>
+                <p className="text-[10px] font-medium text-[#0a0a0b]">S. Patel</p>
                 <p className="text-[9px] text-[#6b7280]">Underwriter</p>
               </div>
             </div>
@@ -192,13 +187,13 @@ export default function HeroDashboard() {
           <div className="flex items-center justify-between px-4 py-3 border-b border-[#e5e7eb] bg-white">
             <div className="flex items-center gap-2 bg-[#f7f8fa] border border-[#e5e7eb] rounded-[5px] px-2.5 py-1.5 w-48">
               <Search size={11} className="text-[#9ca3af]" />
-              <span className="text-[11px] text-[#9ca3af]">Search policies, claims...</span>
+              <span className="text-[11px] text-[#9ca3af]">Search organizations, risks...</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="relative">
                 <Bell size={14} className="text-[#6b7280]" />
                 <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#dc2626] rounded-full text-[7px] text-white flex items-center justify-center font-bold">
-                  3
+                  4
                 </span>
               </div>
               <Settings size={14} className="text-[#6b7280]" />
@@ -211,8 +206,8 @@ export default function HeroDashboard() {
             {/* Page header */}
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-[13px] font-semibold text-[#0a0a0b]">Operations Dashboard</h2>
-                <p className="text-[10px] text-[#9ca3af]">June 2024 · All branches</p>
+                <h2 className="text-[13px] font-semibold text-[#0a0a0b]">Risk Intelligence Dashboard</h2>
+                <p className="text-[10px] text-[#9ca3af]">June 2024 · All monitored organizations</p>
               </div>
               <div className="flex items-center gap-1.5">
                 <select className="text-[10px] bg-white border border-[#e5e7eb] rounded-[4px] px-2 py-1 text-[#6b7280]">
@@ -251,7 +246,7 @@ export default function HeroDashboard() {
             {/* ── Chart (animated bars) ───────────────── */}
             <div className="bg-white border border-[#e5e7eb] rounded-[6px] p-3">
               <div className="flex items-center justify-between mb-3">
-                <p className="text-[11px] font-semibold text-[#0a0a0b]">Premium Collections</p>
+                <p className="text-[11px] font-semibold text-[#0a0a0b]">Risk Signal Volume</p>
                 <span className="text-[9px] text-[#9ca3af]">Last 12 months</span>
               </div>
               <div className="flex items-end gap-1 h-14">
@@ -274,18 +269,18 @@ export default function HeroDashboard() {
               </div>
             </div>
 
-            {/* ── Claims queue (rows fade in) ─────────── */}
+            {/* ── Risk queue (rows fade in) ─────────── */}
             <div className="bg-white border border-[#e5e7eb] rounded-[6px] overflow-hidden">
               <div className="flex items-center justify-between px-3 py-2 border-b border-[#e5e7eb]">
-                <p className="text-[11px] font-semibold text-[#0a0a0b]">Claims Queue</p>
+                <p className="text-[11px] font-semibold text-[#0a0a0b]">Risk Register</p>
                 <button type="button" className="flex items-center gap-0.5 text-[10px] text-[#0165FC]">
                   View all <ChevronRight size={9} />
                 </button>
               </div>
               <div className="divide-y divide-[#f7f8fa]">
-                {ALL_CLAIMS.slice(0, frame.claimCount).map((claim, i) => (
+                {ALL_ORGS.slice(0, frame.orgCount).map((org, i) => (
                   <div
-                    key={claim.id}
+                    key={org.id}
                     className="flex items-center gap-2 px-3 py-2"
                     style={{
                       opacity: 1,
@@ -294,20 +289,20 @@ export default function HeroDashboard() {
                   >
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1.5">
-                        <span className="text-[10px] font-mono text-[#6b7280]">{claim.id}</span>
+                        <span className="text-[10px] font-mono text-[#6b7280]">{org.id}</span>
                         <span className="text-[9px] text-[#9ca3af]">·</span>
-                        <span className="text-[10px] text-[#6b7280]">{claim.type}</span>
+                        <span className="text-[10px] text-[#6b7280]">{org.sector}</span>
                       </div>
-                      <p className="text-[11px] font-medium text-[#0a0a0b] truncate">{claim.insured}</p>
+                      <p className="text-[11px] font-medium text-[#0a0a0b] truncate">{org.name}</p>
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <p className="text-[11px] font-semibold text-[#0a0a0b]">{claim.amount}</p>
+                      <p className="text-[11px] font-semibold text-[#0a0a0b]">{org.score}</p>
                       <div className="flex items-center gap-1 justify-end mt-0.5">
-                        <span className={`text-[8px] px-1 py-0.5 rounded-[2px] font-medium ${RISK_CFG[claim.risk as keyof typeof RISK_CFG]}`}>
-                          {claim.risk.toUpperCase()}
+                        <span className={`text-[8px] px-1 py-0.5 rounded-[2px] font-medium ${RISK_CFG[org.risk as keyof typeof RISK_CFG]}`}>
+                          {org.risk.toUpperCase()}
                         </span>
-                        <span className={`text-[8px] px-1 py-0.5 rounded-[2px] font-medium ${STATUS_CFG[claim.status as keyof typeof STATUS_CFG].color}`}>
-                          {STATUS_CFG[claim.status as keyof typeof STATUS_CFG].label}
+                        <span className={`text-[8px] px-1 py-0.5 rounded-[2px] font-medium ${STATUS_CFG[org.status as keyof typeof STATUS_CFG].color}`}>
+                          {STATUS_CFG[org.status as keyof typeof STATUS_CFG].label}
                         </span>
                       </div>
                     </div>
@@ -318,7 +313,7 @@ export default function HeroDashboard() {
 
             {/* ── Activity feed (rows appear) ─────────── */}
             <div className="bg-white border border-[#e5e7eb] rounded-[6px] p-3">
-              <p className="text-[11px] font-semibold text-[#0a0a0b] mb-2">Recent Activity</p>
+              <p className="text-[11px] font-semibold text-[#0a0a0b] mb-2">Intelligence Feed</p>
               <div className="space-y-2">
                 {ACTIVITIES.slice(0, frame.activityCount).map((a, i) => (
                   <div

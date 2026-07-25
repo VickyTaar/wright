@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import AISection from '@/components/sections/AISection';
+import Security from '@/components/sections/Security';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'AI — Barbon OS',
+  title: 'AI Risk Assurance — Barbon',
   description:
-    'Insurance-specific AI built into every workflow. Fraud detection, document intelligence, risk scoring, and natural language analytics — all on your data.',
+    'Barbon independently evaluates AI systems before deployment and continuously monitors them once live — providing insurers with the technical confidence needed to underwrite autonomous AI risk.',
 };
 
 export default function AIPage() {
@@ -18,55 +18,63 @@ export default function AIPage() {
         <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
           <div className="container-site">
             <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-              AI Engine
+              AI Risk Assurance
             </p>
             <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
-              AI that understands
+              The emerging category:
               <br />
-              insurance.
+              AI risk insurance.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              Barbon OS embeds purpose-built insurance AI across every workflow.
-              Not a chatbot layer on top of legacy software. AI native from the ground up.
+              Businesses are deploying AI agents capable of approving purchases, managing
+              infrastructure, and executing workflows autonomously. Traditional insurance
+              products were never designed for this. Barbon provides the independent
+              technical assurance that enables insurers to underwrite AI systems with
+              measurable confidence.
             </p>
           </div>
         </div>
 
-        <AISection />
+        <Security />
 
         {/* AI capabilities detail */}
         <section className="section-spacing bg-white border-t border-[#e5e7eb]">
           <div className="container-site">
             <div className="max-w-2xl mb-12">
               <h2 className="text-[32px] font-bold tracking-[-0.02em] text-[#0a0a0b] mb-4">
-                AI capabilities across the platform
+                Continuous AI monitoring — once deployed
               </h2>
+              <p className="text-[17px] text-[#6b7280] leading-[1.7]">
+                Our assessment does not end at deployment. Once an AI system is operational,
+                Barbon continuously monitors for changes that may materially alter the risk
+                profile — detecting increasing operational risk before financial loss occurs.
+              </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden">
               {[
                 {
-                  name: 'Claims AI',
-                  detail: 'Automated document extraction, inconsistency detection, preliminary assessment, and settlement recommendation.',
+                  name: 'Permission Changes',
+                  detail: 'Detection of expansions in AI agent permissions that increase autonomous action scope beyond original assessment boundaries.',
                 },
                 {
-                  name: 'Fraud Detection',
-                  detail: 'ML models trained on insurance fraud patterns score every claim and flag high-risk submissions before adjuster review.',
+                  name: 'Prompt & Model Updates',
+                  detail: 'Monitoring of system prompt modifications and model upgrades that may alter decision behaviour or safety characteristics.',
                 },
                 {
-                  name: 'Document Intelligence',
-                  detail: 'Extract structured data from PDFs, images, spreadsheets, and handwritten forms — at scale, with high accuracy.',
+                  name: 'Tool & API Changes',
+                  detail: 'Continuous tracking of new tool integrations and API connections that extend the AI system\'s operational capabilities.',
                 },
                 {
-                  name: 'Underwriting AI',
-                  detail: 'Risk scoring models assist underwriters with preliminary assessments, suggested pricing, and portfolio exposure analysis.',
+                  name: 'Risk Drift Detection',
+                  detail: 'Algorithmic monitoring for gradual degradation in safety, governance, or reliability metrics over time.',
                 },
                 {
-                  name: 'NLP Analytics',
-                  detail: 'Query your entire insurance portfolio in plain language. Ask questions, get structured answers with sources.',
+                  name: 'Operational Anomalies',
+                  detail: 'Real-time flagging of unexpected behaviour, unusual decision patterns, and outputs that deviate from established baselines.',
                 },
                 {
-                  name: 'Predictive Renewals',
-                  detail: 'Identify policies at risk of lapsing before renewal date and surface recommendations to retention teams.',
+                  name: 'Cost & Compliance Monitoring',
+                  detail: 'Tracking of cost anomalies, regulatory compliance drift, and changes in the legal or standards landscape affecting the AI system.',
                 },
               ].map((cap) => (
                 <div key={cap.name} className="bg-white p-6">

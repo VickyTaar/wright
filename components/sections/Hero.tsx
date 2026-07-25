@@ -42,7 +42,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 text-[12px] font-medium text-[#0165FC] bg-[#e8f0fe] border border-[#c7d8fd] rounded-[4px] hover:bg-[#dae6fe] transition-colors"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0165FC]" />
-                Introducing Barbon OS
+                Technology Risk Intelligence
                 <ChevronRight size={12} />
               </Link>
             </motion.div>
@@ -55,9 +55,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
             >
-              The Operating System
+              The Technology Risk
               <br />
-              for Modern Insurance.
+              Intelligence Layer.
             </motion.h1>
 
             {/* Body */}
@@ -67,9 +67,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
             >
-              Barbon OS is an AI-powered insurance platform built for insurers,
-              brokers, bancassurance providers, agencies, and embedded insurance
-              businesses.
+              Barbon continuously measures cyber and AI risk — providing insurers
+              with the real-time intelligence needed to underwrite modern
+              technology with confidence.
             </motion.p>
 
             {/* CTAs */}
@@ -84,15 +84,15 @@ export default function Hero() {
                 id="hero-cta-primary"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 text-[15px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors duration-150 group"
               >
-                Request Demo
+                Request a Briefing
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
-                href="/platform"
+                href="/security"
                 id="hero-cta-secondary"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 text-[15px] font-medium text-[#0a0a0b] bg-white border border-[#e5e7eb] hover:border-[#d1d5db] hover:bg-[#f7f8fa] rounded-[6px] transition-colors duration-150"
               >
-                Explore Platform
+                Explore Our Approach
               </Link>
             </motion.div>
 
@@ -106,11 +106,11 @@ export default function Hero() {
               <div className="h-px bg-[#e5e7eb] w-full" />
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
                 {[
-                  'SOC 2 Type II',
+                  'Vendor-Neutral',
+                  'Independent Assessments',
+                  'Continuous Monitoring',
                   'ISO 27001',
-                  'GDPR Compliant',
-                  'API-First',
-                  'Cloud Native',
+                  'Insurer-Trusted',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-1.5 text-[12px] text-[#9ca3af]">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
@@ -142,7 +142,7 @@ export default function Hero() {
                 <div className="flex-1 flex justify-center">
                   <div className="flex items-center gap-2 bg-white border border-[#e5e7eb] rounded-[4px] px-3 py-1 text-[11px] text-[#9ca3af]">
                     <span>🔒</span>
-                    app.barbonos.io/dashboard
+                    app.barbon.io/risk-intelligence
                   </div>
                 </div>
               </div>

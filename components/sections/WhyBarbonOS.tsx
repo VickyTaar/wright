@@ -1,33 +1,33 @@
 const comparisons = [
   {
-    dimension: 'Deployment',
-    legacy: 'Months of implementation. Custom configuration. On-premise hardware provisioning.',
-    barbon: 'Cloud-native deployment in weeks. Infrastructure provisioned automatically. No hardware to manage.',
+    dimension: 'Assessment Frequency',
+    legacy: 'Annual questionnaire completed at renewal. Posture changes throughout the year go undetected until the next cycle.',
+    barbon: 'Continuous monitoring across the entire policy lifecycle. Material risk changes flagged in real time — not twelve months later.',
   },
   {
-    dimension: 'AI',
-    legacy: 'AI added as an afterthought. Separate tools, disconnected data, manual re-entry.',
-    barbon: 'AI embedded in every workflow — claims, underwriting, fraud detection, documents — from a shared data layer.',
+    dimension: 'Intelligence Source',
+    legacy: 'Self-reported answers from insured organizations. No independent verification of the accuracy or completeness of responses.',
+    barbon: 'Independent technical assessment of the actual environment. Validated against live infrastructure — not self-attestation.',
   },
   {
-    dimension: 'API Access',
-    legacy: 'Proprietary interfaces. Limited or no API access. Integration requires vendor involvement.',
-    barbon: 'Full OpenAPI 3.0 specification. Every function accessible via REST. Self-service integration in hours.',
+    dimension: 'Risk Measurement',
+    legacy: 'Qualitative risk categories based on questionnaire scoring. Limited ability to quantify or compare risk across the portfolio.',
+    barbon: 'Proprietary Cyber Risk Score (0–100) built from hundreds of technical signals. Quantified, explainable, and comparable.',
   },
   {
-    dimension: 'User Experience',
-    legacy: 'Legacy interfaces designed for data entry. High training overhead. Low adoption.',
-    barbon: 'Role-optimised interfaces built for decision making. Intuitive design reduces training time significantly.',
+    dimension: 'AI Risk',
+    legacy: 'No established framework for assessing autonomous AI systems. AI risk excluded or approximated using cyber questions.',
+    barbon: 'Purpose-built AI Risk Assurance framework. Independent evaluation of AI agents before deployment and continuous monitoring once live.',
   },
   {
-    dimension: 'Architecture',
-    legacy: 'Monolithic systems with expensive upgrade cycles. Difficult to extend or customise.',
-    barbon: 'Modular, event-driven architecture. Independent modules share one data platform. Scale what you need.',
+    dimension: 'Vendor Validation',
+    legacy: 'Security vendors listed on questionnaires taken at face value. No verification of effective implementation or actual risk reduction.',
+    barbon: 'Independent validation of every major security vendor — confirming effective deployment, correct configuration, and genuine risk reduction.',
   },
   {
-    dimension: 'Scalability',
-    legacy: 'Fixed infrastructure capacity. Performance degrades under peak load. Manual intervention required.',
-    barbon: 'Auto-scaling cloud infrastructure. Handles high-volume batch processing and real-time workloads.',
+    dimension: 'Underwriting Confidence',
+    legacy: 'Underwriting decisions made on incomplete, unverified, and potentially outdated information about the insured\'s true posture.',
+    barbon: 'Underwriting decisions supported by continuous, independently verified technical intelligence — reducing adverse selection and surprise losses.',
   },
 ];
 
@@ -41,20 +41,20 @@ export default function WhyBarbonOS() {
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-            Why Barbon OS
+            Why Barbon
           </p>
           <h2
             id="why-heading"
             className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
           >
-            Built for the next
+            Built for the next decade
             <br />
-            decade of insurance.
+            of technology risk.
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            Insurance technology has been underinvested for decades.
-            Barbon OS is what happens when a team that understands both
-            modern software and insurance builds the stack from scratch.
+            Technology risk has outgrown traditional underwriting models. Cyber threats
+            change every hour. AI systems evolve continuously. Barbon exists to close
+            the gap between what technology actually does and what insurers can see.
           </p>
         </div>
 
@@ -69,12 +69,12 @@ export default function WhyBarbonOS() {
             </div>
             <div className="px-5 py-3 border-l border-[#e5e7eb]">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-[#9ca3af]">
-                Conventional Systems
+                Traditional Approach
               </span>
             </div>
             <div className="px-5 py-3 border-l border-[#0165FC] bg-[#f0f6ff]">
               <span className="text-[11px] font-semibold uppercase tracking-widest text-[#0165FC]">
-                Barbon OS
+                Barbon
               </span>
             </div>
           </div>

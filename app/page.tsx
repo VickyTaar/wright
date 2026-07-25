@@ -14,9 +14,9 @@ import WhyBarbonOS from '@/components/sections/WhyBarbonOS';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Wright — Modern Insurance Infrastructure',
+  title: 'Barbon — Technology Risk Intelligence for Insurance',
   description:
-    'Barbon OS is an AI-powered operating system for insurance companies — built for insurers, brokers, bancassurance providers, and embedded insurance businesses.',
+    'Barbon enables insurers to confidently underwrite cyber and AI risks through continuous technical assessment, real-time risk intelligence, and independent validation. We make technology risk measurable.',
 };
 
 export default function HomePage() {

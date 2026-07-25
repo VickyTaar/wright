@@ -3,13 +3,13 @@ import { ArrowRight } from 'lucide-react';
 import ClaimsAIInterface from '@/components/mockups/ClaimsAIInterface';
 
 const pipeline = [
-  { step: '01', label: 'Claim Received', detail: 'Documents uploaded — PDF, images, structured data ingested' },
-  { step: '02', label: 'AI Extraction', detail: 'Policy terms, incident details, and supporting evidence parsed' },
-  { step: '03', label: 'Inconsistency Detection', detail: 'Cross-referenced against policy, historical data, and third-party sources' },
-  { step: '04', label: 'Preliminary Assessment', detail: 'Estimated loss calculated with model confidence score' },
-  { step: '05', label: 'Fraud Risk Scoring', detail: 'Behavioural patterns and anomalies evaluated against fraud signals' },
-  { step: '06', label: 'Settlement Recommendation', detail: 'Suggested settlement generated with supporting rationale' },
-  { step: '07', label: 'Approval Routing', detail: 'Routed to the appropriate adjuster or auto-approved by policy rules' },
+  { step: '01', label: 'Signal Collection', detail: 'Continuous data ingestion from cloud, identity, email, endpoint, and threat intelligence sources' },
+  { step: '02', label: 'Environment Analysis', detail: 'Full mapping of the insured\'s technology footprint — on-premise, cloud, and SaaS environments' },
+  { step: '03', label: 'Threat Correlation', detail: 'Active threats correlated against the specific organization\'s exposed attack surface and technology stack' },
+  { step: '04', label: 'Posture Scoring', detail: 'Proprietary risk model converts technical findings into an explainable Cyber Risk Score (0–100)' },
+  { step: '05', label: 'Vendor Assurance', detail: 'Independent validation that existing security vendors are reducing risk — not just deployed on paper' },
+  { step: '06', label: 'Underwriting Report', detail: 'Structured intelligence report delivered in the language of underwriting — with recommended actions' },
+  { step: '07', label: 'Continuous Monitoring', detail: 'Ongoing surveillance flags posture changes, new threats, and material risk shifts throughout the policy term' },
 ];
 
 export default function AISection() {
@@ -22,20 +22,21 @@ export default function AISection() {
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-            AI Engine
+            Our Underwriting Approach
           </p>
           <h2
             id="ai-heading"
             className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
           >
-            AI that does the work,
+            Beyond the questionnaire.
             <br />
-            not just the reporting.
+            Into the infrastructure.
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            Barbon OS embeds AI across every workflow — from document ingestion to
-            settlement recommendation. Every model is purpose-built for insurance,
-            not adapted from a generic foundation.
+            Rather than asking whether a client has antivirus software, Barbon answers
+            the questions that actually determine underwriting outcomes. How likely is
+            this organization to experience a cyber incident over the next twelve months?
+            Is their posture improving or deteriorating? Should premiums be adjusted?
           </p>
         </div>
 
@@ -44,9 +45,9 @@ export default function AISection() {
           {/* Left: Pipeline steps */}
           <div>
             <h3 className="text-[13px] font-semibold uppercase tracking-widest text-[#9ca3af] mb-8">
-              AI Claims Pipeline
+              Risk Intelligence Pipeline
             </h3>
-            <ol className="space-y-0" aria-label="AI claims processing steps">
+            <ol className="space-y-0" aria-label="Risk intelligence processing steps">
               {pipeline.map((item, i) => (
                 <li key={item.step} className="flex gap-5 pb-0">
                   {/* Step connector */}
@@ -70,10 +71,10 @@ export default function AISection() {
             </ol>
 
             <Link
-              href="/ai"
+              href="/security"
               className="inline-flex items-center gap-2 text-[14px] font-medium text-[#0165FC] hover:text-[#0052d4] transition-colors group mt-2"
             >
-              Explore AI capabilities
+              Explore our approach
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
@@ -82,7 +83,7 @@ export default function AISection() {
           <div className="lg:sticky lg:top-24">
             <div className="mb-3">
               <span className="text-[11px] font-medium text-[#9ca3af] uppercase tracking-widest">
-                Live Demo · AI Claims Assistant
+                Live Demo · Risk Assessment Engine
               </span>
             </div>
             <ClaimsAIInterface />
@@ -90,12 +91,12 @@ export default function AISection() {
             {/* Feature chips */}
             <div className="mt-4 flex flex-wrap gap-2">
               {[
-                'Fraud Detection',
-                'Document Intelligence',
-                'Risk Scoring',
-                'Auto-Routing',
-                'Audit Trail',
-                'Explainable AI',
+                'Attack Surface',
+                'Cloud Posture',
+                'Identity Risk',
+                'Dark Web',
+                'BEC Indicators',
+                'Vendor Risk',
               ].map((f) => (
                 <span
                   key={f}

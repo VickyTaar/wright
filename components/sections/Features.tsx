@@ -1,89 +1,89 @@
 import {
-  Cloud, Code2, Brain, Shield, ShieldCheck, ClipboardList, Users,
-  FileText, AlertTriangle, Workflow, BarChart3, LineChart,
-  Building2, Globe, Zap, Plug
+  Cloud, Monitor, Shield, Users, Mail, AlertTriangle,
+  Eye, Key, RefreshCw, HardDrive, Wifi, Database,
+  Globe, Activity, ShieldCheck, TrendingUp
 } from 'lucide-react';
 
-const features = [
+const capabilities = [
   {
     icon: Cloud,
-    name: 'Cloud Native',
-    description: 'Built on modern cloud infrastructure with auto-scaling, multi-region failover, and zero-downtime deployments.',
+    name: 'Microsoft 365 & Azure',
+    description: 'Continuous monitoring of Microsoft cloud environments — identity posture, conditional access, email security, and misconfiguration detection.',
   },
   {
-    icon: Code2,
-    name: 'API First',
-    description: 'Every function is accessible via REST API. Build custom workflows or connect to your existing tech stack.',
-  },
-  {
-    icon: Brain,
-    name: 'AI Powered',
-    description: 'Insurance-specific AI models embedded across underwriting, claims, fraud detection, and document processing.',
-  },
-  {
-    icon: ShieldCheck,
-    name: 'Compliance Ready',
-    description: 'Jurisdiction-specific rule engines, regulatory reporting, and audit trails built into every workflow.',
-  },
-  {
-    icon: Shield,
-    name: 'Secure by Design',
-    description: 'Zero-trust architecture, encryption at rest and in transit, with enterprise identity management from day one.',
-  },
-  {
-    icon: ClipboardList,
-    name: 'Full Audit Trails',
-    description: 'Every action logged, timestamped, and attributed — providing complete accountability across all operations.',
+    icon: Cloud,
+    name: 'AWS Cloud Environments',
+    description: 'Assessment of AWS configurations, IAM policies, public S3 buckets, security groups, and workload exposure across all regions.',
   },
   {
     icon: Users,
-    name: 'Role-Based Access',
-    description: 'Granular permissions at the field level. Define exactly what each role can see, do, and approve.',
+    name: 'Identity Providers',
+    description: 'Continuous review of Okta, Azure AD, and Google Workspace — MFA adoption rates, privileged access, dormant accounts, and sign-in anomalies.',
   },
   {
-    icon: FileText,
-    name: 'Document Automation',
-    description: 'Generate policy documents, certificates, endorsements, and schedules automatically from structured data.',
+    icon: Shield,
+    name: 'Endpoint Protection',
+    description: 'Real-time visibility into EDR deployment coverage, threat detections, unmanaged devices, and patch compliance across the endpoint fleet.',
+  },
+  {
+    icon: Mail,
+    name: 'Email Security',
+    description: 'Assessment of DMARC, DKIM, SPF configuration and enforcement, plus monitoring for phishing simulation results and BEC indicators.',
   },
   {
     icon: AlertTriangle,
-    name: 'Fraud Detection',
-    description: 'Machine learning models trained on insurance fraud patterns score every claim before adjuster review.',
+    name: 'Threat Intelligence Feeds',
+    description: 'Correlation of global threat intelligence against the insured\'s specific infrastructure, domains, IP ranges, and technology stack.',
   },
   {
-    icon: Workflow,
-    name: 'Workflow Automation',
-    description: 'Visual workflow builder for approvals, escalations, notifications, and business process automation.',
+    icon: Eye,
+    name: 'Dark Web Monitoring',
+    description: 'Continuous scanning of dark web forums, paste sites, and criminal marketplaces for leaked credentials, data, and organizational references.',
   },
   {
-    icon: BarChart3,
-    name: 'Reporting',
-    description: 'Scheduled and on-demand reports for regulators, management, actuaries, and reinsurers — in standard formats.',
+    icon: Key,
+    name: 'Credential Exposure',
+    description: 'Real-time detection of compromised credentials — including employee accounts, service accounts, and third-party integration keys.',
   },
   {
-    icon: LineChart,
-    name: 'Analytics',
-    description: 'Real-time portfolio analytics — loss ratios, premium trends, retention rates, and exposure concentration.',
+    icon: RefreshCw,
+    name: 'Patch Management',
+    description: 'Assessment of patching cadence and coverage across operating systems, applications, and critical infrastructure components.',
   },
   {
-    icon: Building2,
-    name: 'Multi-Branch',
-    description: 'Manage multiple branches, regional offices, and business units from a single platform with consolidated reporting.',
+    icon: Database,
+    name: 'Configuration Drift',
+    description: 'Continuous monitoring for deviations from security baselines across cloud, network, and application configurations.',
+  },
+  {
+    icon: HardDrive,
+    name: 'Backup Health',
+    description: 'Verification of backup integrity, encryption, offline copies, and recovery testing — critical indicators for ransomware resilience.',
+  },
+  {
+    icon: Monitor,
+    name: 'Business Continuity Readiness',
+    description: 'Assessment of incident response plans, disaster recovery procedures, tabletop exercise history, and recovery capability.',
+  },
+  {
+    icon: Wifi,
+    name: 'BEC & Fraud Indicators',
+    description: 'Monitoring for business email compromise patterns, executive impersonation attempts, and financial fraud precursors.',
   },
   {
     icon: Globe,
-    name: 'Multi-Company',
-    description: 'Run separate insurance entities on one platform — each with independent books, teams, and compliance rules.',
+    name: 'Domain & Brand Spoofing',
+    description: 'Detection of typosquatted domains, lookalike sites, and domain infrastructure used in phishing campaigns targeting the organization.',
   },
   {
-    icon: Zap,
-    name: 'Real-Time Insights',
-    description: 'Live operational dashboards with millisecond data freshness — no ETL delay, no stale reports.',
+    icon: Activity,
+    name: 'Security Awareness Metrics',
+    description: 'Integration with phishing simulation platforms to assess employee susceptibility and training effectiveness across the organization.',
   },
   {
-    icon: Plug,
-    name: 'Integrations',
-    description: 'Pre-built connectors for payment processors, banks, identity providers, reinsurers, and government registries.',
+    icon: TrendingUp,
+    name: 'Vulnerability Intelligence',
+    description: 'Continuous scanning and enrichment of known vulnerabilities against the organization\'s technology inventory and exposure profile.',
   },
 ];
 
@@ -97,38 +97,39 @@ export default function Features() {
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-            Capabilities
+            Signal Coverage
           </p>
           <h2
             id="features-heading"
             className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
           >
-            Everything your team needs.
+            Every signal.
             <br />
-            Nothing they don&apos;t.
+            Every environment. Continuously.
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            Barbon OS ships with the capabilities that enterprise insurance
-            operations require — and the discipline to not ship what they don&apos;t.
+            Our platform continuously collects and analyzes signals from across an
+            organization&apos;s entire technology environment — transforming raw technical
+            data into structured underwriting intelligence.
           </p>
         </div>
 
-        {/* Features grid */}
+        {/* Capabilities grid */}
         <div
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden"
           role="list"
         >
-          {features.map((feature) => (
+          {capabilities.map((cap) => (
             <div
-              key={feature.name}
+              key={cap.name}
               role="listitem"
               className="bg-white p-5 hover:bg-[#f7f8fa] transition-colors group cursor-default"
             >
               <div className="w-7 h-7 rounded-[5px] bg-[#f7f8fa] border border-[#e5e7eb] flex items-center justify-center mb-3 group-hover:border-[#c7d8fd] group-hover:bg-[#e8f0fe] transition-colors">
-                <feature.icon size={14} className="text-[#6b7280] group-hover:text-[#0165FC] transition-colors" />
+                <cap.icon size={14} className="text-[#6b7280] group-hover:text-[#0165FC] transition-colors" />
               </div>
-              <h3 className="text-[13px] font-semibold text-[#0a0a0b] mb-1.5">{feature.name}</h3>
-              <p className="text-[12px] text-[#6b7280] leading-[1.55]">{feature.description}</p>
+              <h3 className="text-[13px] font-semibold text-[#0a0a0b] mb-1.5">{cap.name}</h3>
+              <p className="text-[12px] text-[#6b7280] leading-[1.55]">{cap.description}</p>
             </div>
           ))}
         </div>

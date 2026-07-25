@@ -1,65 +1,65 @@
-import { Lock, Key, Users, ClipboardList, Globe, HardDrive, RefreshCw, ShieldOff, LogIn, Smartphone, Code2, Scale } from 'lucide-react';
+import { Shield, Brain, CheckCircle2, Lock, Eye, AlertTriangle, Scale, Users, BarChart3, Cpu, RefreshCw, DollarSign } from 'lucide-react';
 
-const securityCapabilities = [
+const assessmentAreas = [
   {
-    icon: Lock,
-    name: 'Encryption',
-    description: 'AES-256 encryption at rest. TLS 1.3 in transit. Field-level encryption for sensitive PII.',
-  },
-  {
-    icon: Key,
-    name: 'Identity Management',
-    description: 'Centralised identity with SCIM provisioning, directory sync, and lifecycle management.',
+    icon: Shield,
+    name: 'Security Assessment',
+    description: 'Evaluation of the AI system\'s underlying infrastructure, API exposure, authentication mechanisms, and attack surface.',
   },
   {
     icon: Users,
-    name: 'Role-Based Access',
-    description: 'Fine-grained RBAC with attribute-level permissions. Least-privilege by default across every module.',
+    name: 'Governance Review',
+    description: 'Assessment of AI governance frameworks, accountability structures, change management processes, and board oversight.',
   },
   {
-    icon: ClipboardList,
-    name: 'Audit Logs',
-    description: 'Immutable, tamper-evident logs for every action — searchable, exportable, and retention-configurable.',
+    icon: CheckCircle2,
+    name: 'Reliability Testing',
+    description: 'Systematic testing of AI system performance under stress, edge cases, and degraded conditions — including fail-safe behaviour.',
   },
   {
-    icon: Globe,
-    name: 'Data Residency',
-    description: 'Choose where your data lives. Region-locked storage with no cross-border replication without explicit consent.',
+    icon: AlertTriangle,
+    name: 'Prompt Injection Resistance',
+    description: 'Structured adversarial testing to determine whether the AI system can be manipulated through crafted inputs.',
   },
   {
-    icon: HardDrive,
-    name: 'Backup & Recovery',
-    description: 'Automated daily backups with point-in-time recovery. RTO < 1 hour. RPO < 15 minutes.',
+    icon: Lock,
+    name: 'Jailbreak & Evasion Testing',
+    description: 'Assessment of the system\'s resilience to attempts to bypass its operating constraints or extract sensitive information.',
+  },
+  {
+    icon: Shield,
+    name: 'Tool Permission Audit',
+    description: 'Review of what actions the AI agent is permitted to take autonomously — and whether those boundaries are enforced.',
+  },
+  {
+    icon: Eye,
+    name: 'Data Leakage Analysis',
+    description: 'Assessment of whether the AI system exposes sensitive organizational, customer, or third-party data through its outputs.',
+  },
+  {
+    icon: Brain,
+    name: 'Hallucination Risk',
+    description: 'Evaluation of the probability and potential financial impact of the AI system generating confidently incorrect outputs.',
   },
   {
     icon: RefreshCw,
-    name: 'Disaster Recovery',
-    description: 'Active-passive failover across availability zones. Tested quarterly. Documented runbooks.',
+    name: 'Decision Consistency',
+    description: 'Testing whether the AI system produces consistent, auditable, and explainable decisions across identical or similar inputs.',
   },
   {
-    icon: ShieldOff,
-    name: 'Zero Trust',
-    description: 'No implicit trust. Every request authenticated, authorised, and inspected — regardless of network origin.',
-  },
-  {
-    icon: LogIn,
-    name: 'SSO',
-    description: 'SAML 2.0 and OIDC-based single sign-on. Integrates with Okta, Azure AD, Google Workspace, and others.',
-  },
-  {
-    icon: Smartphone,
-    name: 'MFA',
-    description: 'Enforced multi-factor authentication with TOTP, WebAuthn, and push notifications.',
-  },
-  {
-    icon: Code2,
-    name: 'API Security',
-    description: 'OAuth 2.0, rate limiting, IP allowlisting, request signing, and anomaly detection on every API endpoint.',
+    icon: Cpu,
+    name: 'Human Oversight Mechanisms',
+    description: 'Verification that adequate human approval workflows, review processes, and emergency stop capabilities are in place.',
   },
   {
     icon: Scale,
-    name: 'Compliance',
-    description: 'SOC 2 Type II, ISO 27001, GDPR, NDPR. Shared responsibility model with full evidence packs available.',
+    name: 'Compliance Readiness',
+    description: 'Assessment against emerging AI regulatory frameworks — including EU AI Act, NIST AI RMF, and sector-specific requirements.',
+  },
+  {
+    icon: DollarSign,
+    name: 'Financial Exposure Modelling',
+    description: 'Quantification of maximum financial loss scenarios arising from AI system failures, errors, and autonomous decision-making.',
   },
 ];
 
@@ -73,66 +73,71 @@ export default function Security() {
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-            Security
+            AI Risk Assurance
           </p>
           <h2
             id="security-heading"
             className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-white mb-5"
           >
-            Enterprise security.
+            Enabling insurers to confidently
             <br />
-            Not bolted on. Built in.
+            underwrite AI systems.
           </h2>
           <p className="text-[17px] text-[#9ca3af] leading-[1.7]">
-            Barbon OS is designed for regulated industries where a security
-            incident is not an option. Every layer of the stack — from API
-            gateway to database — is hardened, monitored, and auditable.
+            Businesses are rapidly deploying AI agents capable of making autonomous
+            decisions — approving purchases, managing infrastructure, executing
+            workflows. Yet one question remains unanswered: who bears financial
+            responsibility when an AI system independently causes loss? Barbon
+            exists to answer that question.
           </p>
         </div>
 
-        {/* Security grid */}
+        {/* Assessment grid */}
         <div
           className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-[#27272a] border border-[#27272a] rounded-[8px] overflow-hidden mb-10"
           role="list"
         >
-          {securityCapabilities.map((cap) => (
+          {assessmentAreas.map((area) => (
             <div
-              key={cap.name}
+              key={area.name}
               role="listitem"
               className="bg-[#111113] p-5 hover:bg-[#18181b] transition-colors group cursor-default"
             >
               <div className="flex items-center gap-2.5 mb-3">
                 <div className="w-7 h-7 rounded-[5px] bg-[#27272a] border border-[#3f3f46] flex items-center justify-center flex-shrink-0 group-hover:border-[#0165FC] group-hover:bg-[#001f6b] transition-colors">
-                  <cap.icon size={14} className="text-[#71717a] group-hover:text-[#0165FC] transition-colors" />
+                  <area.icon size={14} className="text-[#71717a] group-hover:text-[#0165FC] transition-colors" />
                 </div>
-                <h3 className="text-[13px] font-semibold text-white">{cap.name}</h3>
+                <h3 className="text-[13px] font-semibold text-white">{area.name}</h3>
               </div>
-              <p className="text-[12px] text-[#71717a] leading-[1.55]">{cap.description}</p>
+              <p className="text-[12px] text-[#71717a] leading-[1.55]">{area.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Certifications row */}
+        {/* AI Assurance Index */}
         <div className="border border-[#27272a] rounded-[6px] p-5 bg-[#111113]">
           <p className="text-[11px] font-semibold uppercase tracking-widest text-[#71717a] mb-4">
-            Certifications & Standards
+            AI Assurance Index — Barbon Scoring Framework
           </p>
           <div className="flex flex-wrap gap-3">
             {[
-              'SOC 2 Type II',
-              'ISO 27001:2022',
-              'GDPR',
-              'NDPR (Nigeria)',
-              'PCI DSS Level 1',
-              'HIPAA Ready',
-              'OWASP Top 10',
-              'NIST CSF',
-            ].map((cert) => (
+              'Overall AI Assurance Score',
+              'Security',
+              'Governance',
+              'Reliability',
+              'Privacy',
+              'Compliance',
+              'Human Oversight',
+              'Financial Exposure',
+              'Operational Stability',
+              'Autonomy Classification',
+              'Recommended Insurance Class',
+            ].map((dimension) => (
               <span
-                key={cert}
+                key={dimension}
                 className="text-[12px] px-3 py-1.5 bg-[#0a0a0b] border border-[#27272a] text-[#a1a1aa] rounded-[4px] font-mono"
               >
-                {cert}
+                {dimension}
               </span>
             ))}
           </div>

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Security from '@/components/sections/Security';
+import WhyBarbonOS from '@/components/sections/WhyBarbonOS';
+import AISection from '@/components/sections/AISection';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Security — Barbon OS',
+  title: 'Our Approach — Barbon',
   description:
-    'Enterprise-grade security for regulated industries. SOC 2 Type II, ISO 27001, zero-trust architecture, and full audit trails across every workflow.',
+    'Barbon continuously collects technical signals, scores cyber and AI risk, and delivers insurer-grade intelligence. Learn how our approach differs from traditional questionnaire-based underwriting.',
 };
 
 export default function SecurityPage() {
@@ -18,21 +19,23 @@ export default function SecurityPage() {
         <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
           <div className="container-site">
             <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-              Security & Compliance
+              Our Approach
             </p>
             <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
-              Security for regulated
+              How we make technology risk
               <br />
-              industries.
+              measurable.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              Insurance is a regulated industry where a security incident is not
-              an option. Barbon OS is designed from the ground up for enterprises
-              that cannot afford compromise.
+              We continuously collect technical signals from across an organization&apos;s
+              environment, correlate them against threat intelligence, and deliver
+              structured underwriting reports that reflect actual posture — not
+              self-reported answers to checkbox questions.
             </p>
           </div>
         </div>
-        <Security />
+        <AISection />
+        <WhyBarbonOS />
         <CTA />
       </main>
       <Footer />

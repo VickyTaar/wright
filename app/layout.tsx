@@ -14,31 +14,34 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const baseUrl = "https://wrightinsurance.io";
+const baseUrl = "https://barbon.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Wright — Modern Insurance Infrastructure",
-    template: "%s | Wright",
+    default: "Barbon — Technology Risk Intelligence for Insurance",
+    template: "%s | Barbon",
   },
   description:
-    "Barbon OS is an AI-powered operating system for insurance companies. Built for insurers, brokers, bancassurance providers, agencies, and embedded insurance businesses.",
+    "Barbon is a Technology Risk Intelligence company. We enable insurers to confidently underwrite cyber and AI risks through continuous technical assessment, real-time risk intelligence, and independent validation.",
   keywords: [
-    "insurance technology",
+    "technology risk intelligence",
+    "cyber insurance",
+    "AI risk assurance",
+    "cyber risk monitoring",
+    "underwriting intelligence",
+    "cyber risk scoring",
     "insurtech",
-    "insurance operating system",
-    "policy administration",
-    "claims management",
-    "AI insurance",
-    "Barbon OS",
-    "Wright",
-    "insurance platform",
-    "insurance software",
+    "cybersecurity insurance",
+    "AI governance",
+    "vendor assurance",
+    "Barbon",
+    "insurer",
+    "cyber underwriting",
   ],
-  authors: [{ name: "Wright" }],
-  creator: "Wright",
-  publisher: "Wright",
+  authors: [{ name: "Barbon Insurance Technologies" }],
+  creator: "Barbon Insurance Technologies",
+  publisher: "Barbon Insurance Technologies",
   robots: {
     index: true,
     follow: true,
@@ -54,24 +57,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: baseUrl,
-    siteName: "Wright",
-    title: "Wright — Modern Insurance Infrastructure",
+    siteName: "Barbon",
+    title: "Barbon — Technology Risk Intelligence for Insurance",
     description:
-      "Barbon OS is an AI-powered operating system for insurance companies. Built for insurers, brokers, bancassurance providers, and agencies.",
+      "Barbon continuously measures cyber and AI risk — providing insurers with the real-time intelligence needed to underwrite modern technology with confidence.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Wright — Barbon OS",
+        alt: "Barbon — Technology Risk Intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wright — Modern Insurance Infrastructure",
+    title: "Barbon — Technology Risk Intelligence for Insurance",
     description:
-      "Barbon OS is an AI-powered operating system for insurance companies.",
+      "Barbon continuously measures cyber and AI risk — providing insurers with the real-time intelligence needed to underwrite modern technology with confidence.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -99,15 +102,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Wright",
+              name: "Barbon Insurance Technologies",
               url: baseUrl,
               logo: `${baseUrl}/logo.svg`,
               sameAs: [
-                "https://linkedin.com/company/wright",
-                "https://github.com/wright",
+                "https://linkedin.com/company/barbon",
               ],
               description:
-                "Wright builds Barbon OS — an AI-powered operating system for insurance companies.",
+                "Barbon is a Technology Risk Intelligence company enabling insurers to confidently underwrite cyber and AI risks through continuous technical assessment and real-time risk intelligence.",
             }),
           }}
         />

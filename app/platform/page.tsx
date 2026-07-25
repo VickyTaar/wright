@@ -7,9 +7,9 @@ import Integrations from '@/components/sections/Integrations';
 import CTA from '@/components/sections/CTA';
 
 export const metadata: Metadata = {
-  title: 'Platform — Barbon OS',
+  title: 'Cyber Risk Intelligence — Barbon',
   description:
-    'Barbon OS is a modular insurance operating system. Explore all modules: Policy Administration, Claims, Underwriting, CRM, Portals, Payments, Analytics, and more.',
+    'Barbon enables insurers to confidently issue and manage cyber insurance through continuous technical assessment, independent risk scoring, and real-time threat intelligence.',
 };
 
 export default function PlatformPage() {
@@ -21,14 +21,18 @@ export default function PlatformPage() {
         <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
           <div className="container-site">
             <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-              Platform
+              Cyber Risk Intelligence
             </p>
             <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
-              Barbon OS Platform
+              Continuous technical assessment
+              <br />
+              for cyber underwriting.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              A modular insurance operating system where every component shares the
-              same data platform, identity layer, and AI engine.
+              Barbon evaluates organizations throughout the policy lifecycle — not just at
+              renewal. Our platform continuously collects technical signals, scores cyber
+              risk, and delivers insurer-grade intelligence that supports confident
+              underwriting decisions.
             </p>
           </div>
         </div>

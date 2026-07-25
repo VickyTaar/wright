@@ -5,11 +5,11 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Platform', href: '/platform' },
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'AI', href: '/ai' },
-  { label: 'Security', href: '/security' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Cyber Risk', href: '/platform' },
+  { label: 'AI Assurance', href: '/ai' },
+  { label: 'Our Approach', href: '/security' },
+  { label: 'Who We Serve', href: '/solutions' },
+  { label: 'Insights', href: '/resources' },
   { label: 'About', href: '/about' },
 ];
 
@@ -48,7 +48,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          aria-label="Wright — Home"
+          aria-label="Barbon Insurance Technologies — Home"
           className="flex items-center gap-2 group"
         >
           <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ export default function Navbar() {
               />
             </svg>
             <span className="text-[15px] font-semibold tracking-tight text-[#0a0a0b]">
-              Wright
+              Barbon
             </span>
           </div>
         </Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
             id="nav-cta"
             className="inline-flex items-center justify-center px-4 py-2 text-[14px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors duration-150"
           >
-            Request Demo
+            Request a Briefing
           </Link>
         </div>
 
@@ -143,7 +143,7 @@ export default function Navbar() {
                 className="flex items-center justify-center w-full px-4 py-3 text-[15px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                Request Demo
+                Request a Briefing
               </Link>
             </div>
           </nav>

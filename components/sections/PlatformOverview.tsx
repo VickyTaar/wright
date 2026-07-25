@@ -1,76 +1,81 @@
 import Link from 'next/link';
-import { ArrowRight, FileText, ShieldCheck, BarChart3, Users, Building2, UserCircle, CreditCard, LineChart, FolderOpen, Plug, Brain, Scale, Lock } from 'lucide-react';
+import { ArrowRight, Search, ShieldCheck, BarChart3, Eye, AlertTriangle, Monitor, Cloud, Users, Globe, FileCheck, TrendingUp, Target, BookOpen, Activity } from 'lucide-react';
 
-const modules = [
+const services = [
   {
-    icon: FileText,
-    name: 'Policy Administration',
-    description: 'Full lifecycle management — quote, bind, endorse, renew, and cancel across all lines of business.',
-  },
-  {
-    icon: ShieldCheck,
-    name: 'Claims Management',
-    description: 'End-to-end claims processing with automated workflows, reserve management, and adjuster tools.',
+    icon: Search,
+    name: 'Cyber Insurance Risk Assessments',
+    description: 'Independent technical assessments that provide insurers with objective risk intelligence ahead of policy inception and renewal.',
   },
   {
     icon: BarChart3,
-    name: 'Underwriting Workbench',
-    description: 'Structured risk assessment, pricing tools, and approval workflows for underwriting teams.',
+    name: 'Underwriting Intelligence',
+    description: 'Structured risk reports built for underwriting decisions — not compliance reports. Actionable, measurable, and continuously updated.',
+  },
+  {
+    icon: Eye,
+    name: 'Continuous Cyber Risk Monitoring',
+    description: 'Ongoing surveillance across an organization\'s entire technology environment throughout the policy lifecycle — not just at renewal.',
+  },
+  {
+    icon: Target,
+    name: 'Cyber Risk Scoring',
+    description: 'A proprietary scoring model that quantifies cyber risk into a single, explainable metric that insurers can act on with confidence.',
+  },
+  {
+    icon: AlertTriangle,
+    name: 'Threat Intelligence',
+    description: 'Real-time threat feeds correlated against each insured\'s specific environment — surfacing exposure before it becomes a claim.',
+  },
+  {
+    icon: Monitor,
+    name: 'Executive Dashboards',
+    description: 'Clear, executive-friendly reporting translating technical risk signals into the language of insurance underwriting and loss prevention.',
+  },
+  {
+    icon: ShieldCheck,
+    name: 'Security Validation',
+    description: 'Verification that existing security controls are correctly implemented, functioning as intended, and reducing actual risk.',
   },
   {
     icon: Users,
-    name: 'CRM',
-    description: 'Customer relationship management built specifically for insurance — policies, history, and communications.',
+    name: 'Vendor Assurance',
+    description: 'Independent validation that cybersecurity vendors are delivering meaningful risk reduction — not just meeting contractual requirements.',
   },
   {
-    icon: Building2,
-    name: 'Broker Portal',
-    description: 'A dedicated portal for brokers to quote, submit business, and track commissions in real time.',
+    icon: Globe,
+    name: 'Attack Surface Monitoring',
+    description: 'Continuous discovery and monitoring of internet-facing assets, identifying exposed infrastructure before threat actors do.',
   },
   {
-    icon: UserCircle,
-    name: 'Agency Portal',
-    description: 'Agency management with performance dashboards, policy access, and revenue tracking.',
+    icon: Cloud,
+    name: 'Cloud Security Validation',
+    description: 'Assessment of cloud environment configurations across AWS, Azure, and Google Cloud — identifying misconfigurations and policy drift.',
   },
   {
-    icon: Users,
-    name: 'Customer Portal',
-    description: 'Self-service portal for policyholders — view coverage, file claims, make payments, download documents.',
+    icon: Activity,
+    name: 'Identity Risk Monitoring',
+    description: 'Continuous assessment of identity provider health, privileged access, MFA adoption, and credential compromise indicators.',
   },
   {
-    icon: CreditCard,
-    name: 'Payments',
-    description: 'Premium collection, instalment plans, refunds, and reconciliation — integrated with major payment rails.',
+    icon: Search,
+    name: 'Third-Party Risk Reviews',
+    description: 'Evaluation of supply chain and vendor exposure — assessing how third-party risk propagates into the insured\'s environment.',
   },
   {
-    icon: LineChart,
-    name: 'Analytics',
-    description: 'Business intelligence dashboards with portfolio analysis, loss ratios, and regulatory reporting.',
+    icon: BookOpen,
+    name: 'Security Governance Reviews',
+    description: 'Assessment of security programme maturity, policy frameworks, awareness culture, and board-level accountability.',
   },
   {
-    icon: FolderOpen,
-    name: 'Document Management',
-    description: 'Centralised document store with AI extraction, version control, and compliant archival.',
+    icon: FileCheck,
+    name: 'Compliance Validation',
+    description: 'Independent verification of regulatory and standards compliance — providing insurers with evidence beyond self-attestation.',
   },
   {
-    icon: Plug,
-    name: 'Integrations',
-    description: 'Connect to any third-party system via REST APIs, webhooks, and a growing library of pre-built connectors.',
-  },
-  {
-    icon: Brain,
-    name: 'AI Engine',
-    description: 'Fraud detection, document intelligence, risk scoring, and natural language query across your data.',
-  },
-  {
-    icon: Scale,
-    name: 'Compliance',
-    description: 'Regulatory reporting, audit trails, data residency controls, and jurisdiction-specific rule engines.',
-  },
-  {
-    icon: Lock,
-    name: 'Security',
-    description: 'Role-based access, MFA, SSO, zero-trust architecture, and enterprise-grade encryption at rest and in transit.',
+    icon: TrendingUp,
+    name: 'Cyber Risk Trend Analysis',
+    description: 'Longitudinal tracking of an organization\'s cyber posture over time — identifying whether risk is improving, stable, or deteriorating.',
   },
 ];
 
@@ -84,41 +89,41 @@ export default function PlatformOverview() {
         {/* Header */}
         <div className="max-w-2xl mb-14">
           <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-            Platform
+            Cyber Risk Intelligence
           </p>
           <h2
             id="platform-heading"
             className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
           >
-            One platform.
+            Continuous risk intelligence.
             <br />
-            Every insurance function.
+            Across the entire policy lifecycle.
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            Barbon OS is a modular operating system for insurance companies.
-            Each module works independently, or together — sharing the same data
-            platform, the same identity layer, and the same AI engine.
+            Barbon enables insurers and brokers to confidently issue and manage
+            cyber insurance through continuous technical assessment — replacing
+            the annual questionnaire with ongoing, measurable intelligence.
           </p>
         </div>
 
-        {/* Module grid */}
+        {/* Service grid */}
         <div
           className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden mb-10"
           role="list"
         >
-          {modules.map((mod) => (
+          {services.map((svc) => (
             <div
-              key={mod.name}
+              key={svc.name}
               role="listitem"
               className="bg-white p-5 hover:bg-[#f7f8fa] transition-colors duration-150 group cursor-default"
             >
               <div className="flex items-center gap-2.5 mb-3">
                 <div className="w-7 h-7 rounded-[5px] bg-[#e8f0fe] flex items-center justify-center flex-shrink-0 group-hover:bg-[#c7d8fd] transition-colors">
-                  <mod.icon size={14} className="text-[#0165FC]" />
+                  <svc.icon size={14} className="text-[#0165FC]" />
                 </div>
-                <h3 className="text-[13px] font-semibold text-[#0a0a0b]">{mod.name}</h3>
+                <h3 className="text-[13px] font-semibold text-[#0a0a0b]">{svc.name}</h3>
               </div>
-              <p className="text-[12px] text-[#6b7280] leading-[1.55]">{mod.description}</p>
+              <p className="text-[12px] text-[#6b7280] leading-[1.55]">{svc.description}</p>
             </div>
           ))}
         </div>
@@ -128,7 +133,7 @@ export default function PlatformOverview() {
           href="/platform"
           className="inline-flex items-center gap-2 text-[14px] font-medium text-[#0165FC] hover:text-[#0052d4] transition-colors group"
         >
-          Explore the full platform
+          Explore Cyber Risk Intelligence
           <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>

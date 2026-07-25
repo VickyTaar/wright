@@ -3,63 +3,63 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CTA from '@/components/sections/CTA';
-import { ArrowRight, FileText, BookOpen, Video } from 'lucide-react';
+import { ArrowRight, FileText, BookOpen, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Resources — Barbon OS',
+  title: 'Insights — Barbon',
   description:
-    'Documentation, guides, and technical resources for Barbon OS. Learn how to integrate, configure, and scale your insurance operations.',
+    'Frameworks, guides, and technical intelligence from Barbon — covering cyber risk underwriting, AI risk assurance, vendor assurance methodology, and continuous monitoring.',
 };
 
 const resources = [
   {
     type: 'Guide',
     icon: BookOpen,
-    title: 'Getting Started with Barbon OS',
-    description: 'A step-by-step introduction to your Barbon OS environment — from initial configuration to your first policy.',
-    href: '/resources/getting-started',
+    title: 'Cyber Insurance Underwriting in the Age of Continuous Risk',
+    description: 'How continuous technical assessment changes the underwriting model — and why annual questionnaires are no longer sufficient for modern cyber risk.',
+    href: '/resources/cyber-underwriting-guide',
   },
   {
-    type: 'Documentation',
+    type: 'Framework',
     icon: FileText,
-    title: 'API Reference',
-    description: 'Complete OpenAPI 3.0 documentation for all Barbon OS endpoints — with request examples and response schemas.',
-    href: '/resources/api-reference',
+    title: 'AI Risk Assurance Framework',
+    description: 'Barbon\'s structured methodology for independently evaluating autonomous AI systems — covering security, governance, reliability, and financial exposure.',
+    href: '/resources/ai-risk-framework',
   },
   {
     type: 'Guide',
     icon: BookOpen,
-    title: 'Configuring Claims Workflows',
-    description: 'How to design, test, and deploy automated claims workflows using the Barbon OS workflow builder.',
-    href: '/resources/claims-workflows',
+    title: 'Vendor Assurance Methodology',
+    description: 'How Barbon independently validates whether cybersecurity vendors are reducing organizational risk — not just fulfilling contractual requirements.',
+    href: '/resources/vendor-assurance',
+  },
+  {
+    type: 'Overview',
+    icon: BarChart3,
+    title: 'Continuous Monitoring: What We Collect and Why',
+    description: 'A technical overview of the signal sources, monitoring cadence, and intelligence transformations that power Barbon\'s risk scoring engine.',
+    href: '/resources/continuous-monitoring',
+  },
+  {
+    type: 'Framework',
+    icon: FileText,
+    title: 'Cyber Risk Scoring Methodology',
+    description: 'The technical specification behind Barbon\'s proprietary Cyber Risk Score — inputs, weightings, model assumptions, and interpretation guidance.',
+    href: '/resources/risk-scoring',
   },
   {
     type: 'Guide',
     icon: BookOpen,
-    title: 'RBAC and Permission Management',
-    description: 'Best practices for designing role hierarchies, managing permissions at scale, and enforcing least-privilege.',
-    href: '/resources/rbac',
-  },
-  {
-    type: 'Documentation',
-    icon: FileText,
-    title: 'Integration Guide',
-    description: 'How to connect Barbon OS to payment processors, banking APIs, identity providers, and third-party systems.',
-    href: '/resources/integrations',
-  },
-  {
-    type: 'Webinar',
-    icon: Video,
-    title: 'AI in Claims Processing',
-    description: 'A recorded walkthrough of the AI claims pipeline — from document ingestion to settlement recommendation.',
-    href: '/resources/ai-claims-webinar',
+    title: 'AI Governance for Insurance Underwriters',
+    description: 'A practical guide for underwriters evaluating AI risk — covering governance frameworks, regulatory landscape, and assessment criteria.',
+    href: '/resources/ai-governance-guide',
   },
 ];
 
 const typeColors: Record<string, string> = {
-  Guide: 'bg-[#e8f0fe] text-[#0165FC]',
-  Documentation: 'bg-[#f7f8fa] text-[#6b7280]',
-  Webinar: 'bg-[#ecfdf5] text-[#059669]',
+  Guide:     'bg-[#e8f0fe] text-[#0165FC]',
+  Framework: 'bg-[#f7f8fa] text-[#6b7280]',
+  Overview:  'bg-[#ecfdf5] text-[#059669]',
 };
 
 export default function ResourcesPage() {
@@ -70,21 +70,22 @@ export default function ResourcesPage() {
         <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
           <div className="container-site">
             <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-              Resources
+              Insights
             </p>
             <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
-              Documentation &amp; guides.
+              Frameworks &amp; intelligence.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              Technical resources for teams implementing, operating, and extending
-              Barbon OS across their insurance business.
+              Guides, methodologies, and technical frameworks for insurers, brokers,
+              and organizations navigating the intersection of technology risk
+              and insurance.
             </p>
           </div>
         </div>
 
         <section className="section-spacing bg-[#f7f8fa]" aria-labelledby="resources-list">
           <div className="container-site">
-            <h2 id="resources-list" className="sr-only">All resources</h2>
+            <h2 id="resources-list" className="sr-only">All insights</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {resources.map((res) => (
                 <Link

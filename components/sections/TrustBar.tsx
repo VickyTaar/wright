@@ -1,10 +1,10 @@
-import { ShieldCheck, Zap, Lock, Globe } from 'lucide-react';
+import { ShieldCheck, Eye, Scale, Zap } from 'lucide-react';
 
 const pillars = [
-  { icon: ShieldCheck, label: 'Compliance-Ready' },
-  { icon: Zap, label: 'High Performance' },
-  { icon: Lock, label: 'Secure by Design' },
-  { icon: Globe, label: 'Global Infrastructure' },
+  { icon: ShieldCheck, label: 'Independent & Vendor-Neutral' },
+  { icon: Eye,         label: 'Continuously Validated' },
+  { icon: Scale,       label: 'Insurer-Grade Intelligence' },
+  { icon: Zap,         label: 'Real-Time Risk Signals' },
 ];
 
 export default function TrustBar() {
@@ -18,8 +18,8 @@ export default function TrustBar() {
           {/* Statement */}
           <div className="flex-1 max-w-md">
             <p className="text-[15px] font-medium text-[#0a0a0b] leading-snug">
-              Built for insurers that demand reliability,
-              compliance, security, and speed.
+              Built for insurers that need to underwrite
+              technology risk with measurable confidence.
             </p>
           </div>
 

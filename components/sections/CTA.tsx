@@ -16,14 +16,14 @@ export default function CTA() {
             id="cta-heading"
             className="text-[32px] md:text-[40px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5 text-balance"
           >
-            Ready to build your
+            Ready to underwrite technology
             <br />
-            insurance operation on Barbon OS?
+            risk with confidence?
           </h2>
           <p className="text-[17px] text-[#6b7280] leading-[1.7] mb-8 max-w-lg">
-            Talk to our team. We&apos;ll understand your operation,
-            walk you through a live environment, and help you
-            determine the right configuration for your business.
+            Talk to our team. We&apos;ll walk you through our risk intelligence platform,
+            discuss how continuous assessment differs from traditional approaches, and
+            help you determine the right programme for your underwriting operation.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
@@ -31,7 +31,7 @@ export default function CTA() {
               id="cta-demo"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 text-[15px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors duration-150 group"
             >
-              Request a Demo
+              Request a Briefing
               <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link
@@ -39,13 +39,13 @@ export default function CTA() {
               id="cta-contact"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 text-[15px] font-medium text-[#0a0a0b] bg-white border border-[#e5e7eb] hover:border-[#d1d5db] hover:bg-[#f7f8fa] rounded-[6px] transition-colors duration-150"
             >
-              Contact Sales
+              Contact Our Team
             </Link>
           </div>
 
           {/* Response time note */}
           <p className="mt-6 text-[12px] text-[#9ca3af]">
-            We respond to all demo requests within one business day.
+            We respond to all briefing requests within one business day.
           </p>
         </div>
       </div>
