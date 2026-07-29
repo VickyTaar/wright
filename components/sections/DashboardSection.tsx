@@ -73,7 +73,7 @@ export default function DashboardSection() {
             <div className="flex-1 flex justify-center">
               <div className="flex items-center gap-2 bg-white border border-[#e5e7eb] rounded-[4px] px-3 py-1 text-[11px] text-[#9ca3af]">
                 <span>🔒</span>
-                app.barbon.io/risk-intelligence
+                app.barbon.tech/risk-intelligence
               </div>
             </div>
             <div className="flex items-center gap-2">

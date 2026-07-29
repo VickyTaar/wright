@@ -85,7 +85,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@barbon.io"
+                href="mailto:hello@barbon.tech"
                 aria-label="Email Barbon"
                 className="p-2 text-[#9ca3af] hover:text-[#0165FC] transition-colors rounded-md hover:bg-[#f7f8fa]"
               >

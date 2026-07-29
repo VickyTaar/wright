@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const baseUrl = "https://barbon.io";
+const baseUrl = "https://barbon.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

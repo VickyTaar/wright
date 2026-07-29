@@ -47,10 +47,10 @@ export default function ContactPage() {
                 <h2 className="text-[18px] font-semibold text-[#0a0a0b] mb-6">Contact details</h2>
                 <div className="space-y-4">
                   {[
-                    { label: 'General Enquiries', value: 'hello@wrightinsurance.io' },
-                    { label: 'Sales & Partnerships', value: 'sales@wrightinsurance.io' },
-                    { label: 'Technical Support', value: 'support@wrightinsurance.io' },
-                    { label: 'Security Disclosures', value: 'security@wrightinsurance.io' },
+                    { label: 'General Enquiries', value: 'hello@barbon.tech' },
+                    { label: 'Sales & Partnerships', value: 'sales@barbon.tech' },
+                    { label: 'Technical Support', value: 'support@barbon.tech' },
+                    { label: 'Security Disclosures', value: 'security@barbon.tech' },
                   ].map((item) => (
                     <div key={item.label} className="border border-[#e5e7eb] rounded-[6px] px-4 py-3 bg-white">
                       <p className="text-[11px] text-[#9ca3af] mb-0.5">{item.label}</p>
