@@ -78,9 +78,9 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
@@ -104,7 +104,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Barbon Insurance Technologies",
               url: baseUrl,
-              logo: `${baseUrl}/logo.svg`,
+              logo: `${baseUrl}/logo.png`,
               sameAs: [
                 "https://linkedin.com/company/barbon",
               ],

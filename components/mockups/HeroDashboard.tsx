@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
+import Logo from '@/components/ui/Logo';
 import {
   TrendingUp, TrendingDown, Bell, Search, Settings,
   LayoutDashboard, ShieldCheck, Brain, BarChart3,
@@ -141,14 +143,7 @@ export default function HeroDashboard() {
         <div className="hidden lg:flex flex-col w-[160px] border-r border-[#e5e7eb] bg-[#f7f8fa] flex-shrink-0">
           {/* Logo */}
           <div className="px-4 py-4 border-b border-[#e5e7eb]">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-[#0165FC] rounded-[4px] flex items-center justify-center">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 3h8M2 6h5M2 9h6" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <span className="text-[12px] font-semibold text-[#0a0a0b]">Barbon</span>
-            </div>
+            <Logo size={22} textClassName="text-[12px] font-semibold text-[#0a0a0b]" />
           </div>
 
           {/* Nav */}

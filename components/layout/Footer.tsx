@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 const footerNav = {
   services: {
@@ -54,18 +55,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <rect width="28" height="28" rx="6" fill="#0165FC" />
-                <path
-                  d="M7 8h14M7 14h8M7 20h11"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <span className="text-[15px] font-semibold tracking-tight text-[#0a0a0b]">
-                Barbon
-              </span>
+              <Logo size={32} />
             </Link>
             <p className="text-[14px] text-[#6b7280] leading-relaxed max-w-[240px] mb-6">
               The technology intelligence layer between cybersecurity, AI, and insurance.
