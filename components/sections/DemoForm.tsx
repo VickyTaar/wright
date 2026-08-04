@@ -1,26 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { ArrowRight } from 'lucide-react';
 
+const FORMSPREE_ID = 'xjybbojv';
+
 export default function DemoForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    company: '',
-    size: '',
-    role: '',
-    vertical: '',
-    message: '',
-  });
+  const [state, handleSubmit] = useForm(FORMSPREE_ID);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  if (submitted) {
+  if (state.succeeded) {
     return (
       <div className="border border-[#e5e7eb] rounded-[8px] p-10 text-center bg-white">
         <div className="w-12 h-12 bg-[#ecfdf5] rounded-full flex items-center justify-center mx-auto mb-5">
@@ -51,13 +39,14 @@ export default function DemoForm() {
           <input
             id="demo-name"
             type="text"
+            name="name"
             required
             autoComplete="name"
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors"
+            disabled={state.submitting}
+            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
             placeholder="Amara Kamara"
           />
+          <ValidationError field="name" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
         </div>
         <div>
           <label htmlFor="demo-email" className="block text-[12px] font-medium text-[#0a0a0b] mb-1.5">
@@ -66,13 +55,14 @@ export default function DemoForm() {
           <input
             id="demo-email"
             type="email"
+            name="email"
             required
             autoComplete="email"
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors"
+            disabled={state.submitting}
+            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
             placeholder="amara@company.com"
           />
+          <ValidationError field="email" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
         </div>
       </div>
 
@@ -84,13 +74,14 @@ export default function DemoForm() {
           <input
             id="demo-company"
             type="text"
+            name="company"
             required
             autoComplete="organization"
-            value={form.company}
-            onChange={(e) => setForm({ ...form, company: e.target.value })}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors"
+            disabled={state.submitting}
+            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
             placeholder="Acacia Insurance Ltd"
           />
+          <ValidationError field="company" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
         </div>
         <div>
           <label htmlFor="demo-size" className="block text-[12px] font-medium text-[#0a0a0b] mb-1.5">
@@ -98,9 +89,9 @@ export default function DemoForm() {
           </label>
           <select
             id="demo-size"
-            value={form.size}
-            onChange={(e) => setForm({ ...form, size: e.target.value })}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors"
+            name="company_size"
+            disabled={state.submitting}
+            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
           >
             <option value="">Select size</option>
             <option>1–50 employees</option>
@@ -118,9 +109,9 @@ export default function DemoForm() {
           </label>
           <select
             id="demo-role"
-            value={form.role}
-            onChange={(e) => setForm({ ...form, role: e.target.value })}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors"
+            name="role"
+            disabled={state.submitting}
+            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
           >
             <option value="">Select role</option>
             <option>CTO / CIO</option>
@@ -138,9 +129,9 @@ export default function DemoForm() {
           </label>
           <select
             id="demo-vertical"
-            value={form.vertical}
-            onChange={(e) => setForm({ ...form, vertical: e.target.value })}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors"
+            name="insurance_vertical"
+            disabled={state.submitting}
+            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
           >
             <option value="">Select vertical</option>
             <option>General Insurance</option>
@@ -161,20 +152,27 @@ export default function DemoForm() {
         </label>
         <textarea
           id="demo-message"
+          name="message"
           rows={3}
-          value={form.message}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors resize-none"
+          disabled={state.submitting}
+          className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors resize-none disabled:opacity-60"
           placeholder="Briefly describe what you're trying to solve or build..."
         />
+        <ValidationError field="message" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
       </div>
+
+      {/* Form-level errors (e.g. network failure, spam block) */}
+      <ValidationError errors={state.errors} className="text-[12px] text-red-500" />
 
       <button
         type="submit"
-        className="flex items-center gap-2 px-5 py-2.5 text-[14px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors group"
+        disabled={state.submitting}
+        className="flex items-center gap-2 px-5 py-2.5 text-[14px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors group disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Request Demo
-        <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+        {state.submitting ? 'Submitting…' : 'Request Demo'}
+        {!state.submitting && (
+          <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+        )}
       </button>
     </form>
   );
