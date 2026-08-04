@@ -63,7 +63,7 @@ export default function Footer() {
             {/* Social links */}
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com/company/barbon"
+                href="https://linkedin.com/company/barbon-insurance-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Barbon on LinkedIn"
