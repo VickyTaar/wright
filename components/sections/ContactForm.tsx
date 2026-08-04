@@ -1,7 +1,6 @@
 'use client';
 
 import { useForm, ValidationError } from '@formspree/react';
-import { Send } from 'lucide-react';
 
 const FORMSPREE_ID = 'xjybbojv';
 
@@ -120,13 +119,44 @@ export default function ContactForm() {
       {/* Form-level errors (e.g. network, spam block) */}
       <ValidationError errors={state.errors} className="text-[12px] text-red-500" />
 
+      {/* Uiverse animated send button */}
       <button
         type="submit"
         disabled={state.submitting}
-        className="flex items-center gap-2 px-4 py-2.5 text-[13px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[5px] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="send-btn"
       >
-        {state.submitting ? 'Sending…' : 'Send message'}
-        {!state.submitting && <Send size={13} />}
+        <div className="outline" />
+
+        {/* Default state — plane + "Send message" */}
+        <div className="state state--default">
+          <div className="icon">
+            {/* Paper-plane SVG */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </div>
+          <p>
+            {/* "Send" — span 4 (d) gets margin-right via CSS nth-child(4) */}
+            {['S','e','n','d','m','e','s','s','a','g','e'].map((letter, i) => (
+              <span key={i} style={{ '--i': i } as React.CSSProperties}>{letter}</span>
+            ))}
+          </p>
+        </div>
+
+        {/* Sent state — checkmark + "Sent!" */}
+        <div className="state state--sent">
+          <div className="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0165FC" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <p>
+            {['S','e','n','t','!'].map((letter, i) => (
+              <span key={i} style={{ '--i': i } as React.CSSProperties}>{letter}</span>
+            ))}
+          </p>
+        </div>
       </button>
     </form>
   );
