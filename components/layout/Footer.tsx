@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
 
 const footerNav = {
@@ -80,6 +80,13 @@ export default function Footer() {
                 className="p-2 text-[#9ca3af] hover:text-[#0165FC] transition-colors rounded-md hover:bg-[#f7f8fa]"
               >
                 <Mail size={16} />
+              </a>
+              <a
+                href="tel:+25470696363"
+                aria-label="Call Barbon"
+                className="p-2 text-[#9ca3af] hover:text-[#0165FC] transition-colors rounded-md hover:bg-[#f7f8fa]"
+              >
+                <Phone size={16} />
               </a>
             </div>
           </div>

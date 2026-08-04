@@ -19,10 +19,9 @@ export const metadata: Metadata = {
 };
 
 const contactDetails = [
-  { label: 'General Enquiries', value: 'hello@barbon.tech' },
-  { label: 'Sales & Partnerships', value: 'sales@barbon.tech' },
-  { label: 'Technical Support', value: 'support@barbon.tech' },
-  { label: 'Security Disclosures', value: 'security@barbon.tech' },
+  { label: 'General Enquiries', value: 'hello@barbon.tech', href: 'mailto:hello@barbon.tech' },
+  { label: 'Direct Contact', value: 'victor@barbon.tech', href: 'mailto:victor@barbon.tech' },
+  { label: 'Phone', value: '+254 706 963 63', href: 'tel:+254706 96363' },
 ];
 
 export default function ContactPage() {
@@ -57,7 +56,7 @@ export default function ContactPage() {
                     <div key={item.label} className="border border-[#e5e7eb] rounded-[6px] px-4 py-3 bg-white">
                       <p className="text-[11px] text-[#9ca3af] mb-0.5">{item.label}</p>
                       <a
-                        href={`mailto:${item.value}`}
+                        href={item.href}
                         className="text-[14px] font-medium text-[#0165FC] hover:text-[#0052d4] transition-colors"
                       >
                         {item.value}

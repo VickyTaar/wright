@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const GTM_ID = "GTM-KRNMLW6C";
+const GA4_ID = "G-273Q8CJ278";
 const baseUrl = "https://barbon.tech";
 
 export const metadata: Metadata = {
@@ -127,6 +128,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "hello@barbon.tech",
+                telephone: "+25470696363",
                 contactType: "customer service",
                 availableLanguage: "English",
               },
@@ -188,6 +190,23 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+
+        {/* Google Analytics 4 — GA4 measurement ID: G-273Q8CJ278 */}
+        <Script
+          id="ga4-loader"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+        />
+        <Script
+          id="ga4-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_ID}');`,
           }}
         />
       </body>
