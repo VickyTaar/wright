@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,6 +15,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+const GTM_ID = "GTM-KRNMLW6C";
 const baseUrl = "https://barbon.tech";
 
 export const metadata: Metadata = {
@@ -38,10 +40,20 @@ export const metadata: Metadata = {
     "Barbon",
     "insurer",
     "cyber underwriting",
+    "active risk underwriting",
+    "cyber telemetry",
+    "cyber risk assessment",
+    "insurance technology",
+    "risk intelligence platform",
+    "Barbon Intelligent Technologies",
   ],
-  authors: [{ name: "Barbon Insurance Technologies" }],
-  creator: "Barbon Insurance Technologies",
-  publisher: "Barbon Insurance Technologies",
+  authors: [{ name: "Barbon Intelligent Technologies" }],
+  creator: "Barbon Intelligent Technologies",
+  publisher: "Barbon Intelligent Technologies",
+  category: "Cyber Insurance Technology",
+  alternates: {
+    canonical: baseUrl,
+  },
   robots: {
     index: true,
     follow: true,
@@ -96,13 +108,15 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Organization schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Barbon Insurance Technologies",
+              name: "Barbon Intelligent Technologies",
+              alternateName: "Barbon",
               url: baseUrl,
               logo: `${baseUrl}/logo.png`,
               sameAs: [
@@ -110,12 +124,72 @@ export default function RootLayout({
               ],
               description:
                 "Barbon is a Technology Risk Intelligence company enabling insurers to confidently underwrite cyber and AI risks through continuous technical assessment and real-time risk intelligence.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "hello@barbon.tech",
+                contactType: "customer service",
+                availableLanguage: "English",
+              },
+              areaServed: "Worldwide",
+              knowsAbout: [
+                "Cyber Insurance",
+                "AI Risk Assessment",
+                "Technology Risk Intelligence",
+                "Cyber Risk Underwriting",
+                "Continuous Security Monitoring",
+              ],
+            }),
+          }}
+        />
+        {/* WebSite schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Barbon",
+              url: baseUrl,
+              description:
+                "Technology Risk Intelligence for the Insurance Industry.",
             }),
           }}
         />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
+        {/* GTM noscript fallback — must be immediately after <body> open */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+
+        {/* Skip to main content — accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#0165FC] focus:text-white focus:rounded-[6px] focus:text-[14px] focus:font-medium focus:outline-none focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
+
         {children}
+
+        {/* Google Tag Manager — afterInteractive is the documented strategy for tag managers */}
+        <Script
+          id="gtm-loader"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
       </body>
     </html>
   );

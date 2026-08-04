@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'Cyber Risk Intelligence - Barbon',
   description:
     'Barbon enables insurers to confidently issue and manage cyber insurance through continuous technical assessment, independent risk scoring, and real-time threat intelligence.',
+  alternates: {
+    canonical: 'https://barbon.tech/platform',
+  },
+  openGraph: {
+    url: 'https://barbon.tech/platform',
+  },
 };
 
 export default function PlatformPage() {

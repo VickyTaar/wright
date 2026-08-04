@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: 'Who We Serve - Barbon',
   description:
     'Barbon serves insurers, brokers, MGAs, enterprise organizations, technology providers, and financial institutions - providing technology risk intelligence across the insurance ecosystem.',
+  alternates: {
+    canonical: 'https://barbon.tech/solutions',
+  },
+  openGraph: {
+    url: 'https://barbon.tech/solutions',
+  },
 };
 
 export default function SolutionsPage() {

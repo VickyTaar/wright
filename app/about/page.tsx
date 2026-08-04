@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: 'About - Barbon Insurance Technologies',
   description:
     'Barbon Insurance Technologies is a Technology Risk Intelligence company. We sit between cybersecurity, artificial intelligence, and insurance - making emerging technology insurable.',
+  alternates: {
+    canonical: 'https://barbon.tech/about',
+  },
+  openGraph: {
+    url: 'https://barbon.tech/about',
+  },
 };
 
 const values = [

@@ -17,6 +17,12 @@ export const metadata: Metadata = {
   title: 'Barbon - Technology Risk Intelligence for Insurance',
   description:
     'Barbon enables insurers to confidently underwrite cyber and AI risks through continuous technical assessment, real-time risk intelligence, and independent validation. We make technology risk measurable.',
+  alternates: {
+    canonical: 'https://barbon.tech',
+  },
+  openGraph: {
+    url: 'https://barbon.tech',
+  },
 };
 
 export default function HomePage() {

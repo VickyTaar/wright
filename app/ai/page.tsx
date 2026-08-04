@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: 'AI Risk Assurance - Barbon',
   description:
     'Barbon independently evaluates AI systems before deployment and continuously monitors them once live - providing insurers with the technical confidence needed to underwrite autonomous AI risk.',
+  alternates: {
+    canonical: 'https://barbon.tech/ai',
+  },
+  openGraph: {
+    url: 'https://barbon.tech/ai',
+  },
 };
 
 export default function AIPage() {

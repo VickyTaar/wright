@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: 'Our Approach - Barbon',
   description:
     'Barbon continuously collects technical signals, scores cyber and AI risk, and delivers insurer-grade intelligence. Learn how our approach differs from traditional questionnaire-based underwriting.',
+  alternates: {
+    canonical: 'https://barbon.tech/security',
+  },
+  openGraph: {
+    url: 'https://barbon.tech/security',
+  },
 };
 
 export default function SecurityPage() {

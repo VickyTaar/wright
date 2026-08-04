@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: 'Insights - Barbon',
   description:
     'Frameworks, guides, and technical intelligence from Barbon - covering cyber risk underwriting, AI risk assurance, vendor assurance methodology, and continuous monitoring.',
+  alternates: {
+    canonical: 'https://barbon.tech/resources',
+  },
+  openGraph: {
+    url: 'https://barbon.tech/resources',
+  },
 };
 
 const resources = [
