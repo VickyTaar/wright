@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import TrustBar from '@/components/sections/TrustBar';
 import PlatformOverview from '@/components/sections/PlatformOverview';
+import RiskyTechHighlight from '@/components/sections/RiskyTechHighlight';
 import AISection from '@/components/sections/AISection';
 import DashboardSection from '@/components/sections/DashboardSection';
 import Features from '@/components/sections/Features';
@@ -33,6 +34,7 @@ export default function HomePage() {
         <Hero />
         <TrustBar />
         <PlatformOverview />
+        <RiskyTechHighlight />
         <AISection />
         <DashboardSection />
         <Features />

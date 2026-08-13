@@ -38,12 +38,12 @@ export default function Hero() {
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
               <Link
-                href="/platform"
-                className="inline-flex items-center gap-2 px-3 py-1.5 mb-8 text-[12px] font-medium text-[#0165FC] bg-[#e8f0fe] border border-[#c7d8fd] rounded-[4px] hover:bg-[#dae6fe] transition-colors"
+                href="/risky-tech"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-8 text-[12px] font-semibold text-[#0165FC] bg-[#e8f0fe] border border-[#c7d8fd] rounded-full hover:bg-[#dae6fe] transition-all shadow-2xs group"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0165FC]" />
-                Technology Risk Intelligence
-                <ChevronRight size={12} />
+                <span className="w-2 h-2 rounded-full bg-[#0165FC] animate-pulse" />
+                <span>NEW: 2026 Risky Tech Ranking Released</span>
+                <ChevronRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </motion.div>
 
