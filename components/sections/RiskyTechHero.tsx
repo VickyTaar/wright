@@ -42,7 +42,7 @@ export default function RiskyTechHero() {
             className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 text-[12px] font-semibold tracking-wider text-[#0165FC] uppercase bg-[#e8f0fe] border border-[#c7d8fd] rounded-full"
           >
             <ShieldAlert size={14} className="text-[#0165FC]" />
-            <span>BARBON OS RISK INDEX • 2026 EDITION</span>
+            <span>BARBON RISK INDEX • 2026 EDITION</span>
           </motion.div>
 
           {/* Main Title */}
@@ -114,10 +114,10 @@ export default function RiskyTechHero() {
                 <span>How the Risky Tech Ranking was created</span>
               </div>
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#0f172a] tracking-tight">
-                Empowered by the Coalition Exploit Scoring System (CESS)¹ & NIST CPE Dictionary
+                Empowered by the Barbon Exploit Scoring System (BESS)¹ & NIST CPE Dictionary
               </h2>
               <p className="text-[14px] md:text-[15px] text-[#475569] leading-[1.65]">
-                To create the Risky Tech Ranking, we use the <strong>Coalition Exploit Scoring System (CESS)¹</strong> to score vulnerabilities that appear in the National Institute of Standards and Technology’s (NIST) Official Common Platform Enumeration (CPE) Dictionary. We map vulnerabilities from the National Vulnerability Database (NVD) to vendors using NIST enrichment, scoring vendors by adding up all of their vulnerabilities weighted by real-world exploitability over time.
+                To create the Risky Tech Ranking, we use the <strong>Barbon Exploit Scoring System (BESS)¹</strong> to score vulnerabilities that appear in the National Institute of Standards and Technology’s (NIST) Official Common Platform Enumeration (CPE) Dictionary. We map vulnerabilities from the National Vulnerability Database (NVD) to vendors using NIST enrichment, scoring vendors by adding up all of their vulnerabilities weighted by real-world exploitability over time.
               </p>
             </div>
             <a

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ShieldAlert, ArrowRight, TrendingUp, AlertTriangle, ChevronRight } from 'lucide-react';
+import { ShieldAlert, ArrowRight, TrendingUp, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { RISKY_TECH_VENDORS } from '@/lib/riskyTechData';
 
@@ -22,7 +22,7 @@ export default function RiskyTechHighlight() {
               className="inline-flex items-center gap-2 px-3.5 py-1.5 text-[12px] font-bold text-[#0165FC] tracking-wider uppercase bg-[#e8f0fe] border border-[#c7d8fd] rounded-full"
             >
               <ShieldAlert size={14} />
-              <span>NEW: 2026 BENCHMARK INDEX RELEASED</span>
+              <span>BARBON RISK INDEX • 2026 EDITION RELEASED</span>
             </motion.div>
 
             <motion.h2
@@ -42,7 +42,7 @@ export default function RiskyTechHighlight() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-[16px] md:text-[18px] text-[#6b7280] leading-relaxed"
             >
-              Discover which technology providers were most vulnerable to exploitation. Built using the Coalition Exploit Scoring System (CESS) and NIST CPE mapping to help insurers and enterprises make data-driven technology decisions.
+              Discover which technology providers were most vulnerable to exploitation. Built using the Barbon Exploit Scoring System (BESS) and NIST CPE mapping to help insurers and enterprises make data-driven technology decisions.
             </motion.p>
 
             {/* Metric Pills */}
@@ -115,7 +115,7 @@ export default function RiskyTechHighlight() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[15px]">Top Risky Tech Snapshot</h3>
-                    <p className="text-[12px] text-[#94a3b8]">Weighted Exploit Risk Score Index</p>
+                    <p className="text-[12px] text-[#94a3b8]">Barbon Risk Score Index</p>
                   </div>
                 </div>
                 <Link
@@ -161,7 +161,7 @@ export default function RiskyTechHighlight() {
 
               {/* Card Footer */}
               <div className="p-4 bg-[#f8fafc] border-t border-[#e5e7eb] flex items-center justify-between text-[13px]">
-                <span className="text-[#6b7280]">Data sourced via NIST CPE & Coalition ESS</span>
+                <span className="text-[#6b7280]">Data sourced via NIST CPE & Barbon ESS</span>
                 <Link
                   href="/risky-tech"
                   className="font-bold text-[#0165FC] hover:underline"
