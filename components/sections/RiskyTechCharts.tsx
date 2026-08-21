@@ -24,7 +24,7 @@ export default function RiskyTechCharts() {
             <span>Quarterly Trends & Analytics</span>
           </div>
           <h2 className="text-[28px] md:text-[36px] font-bold text-[#0a0a0b] tracking-tight">
-            How the Risky Tech Ranking has evolved
+            How the Barbon Risk Index has evolved
           </h2>
           <p className="text-[16px] text-[#6b7280] mt-2">
             Historical progression of tech risk vulnerability severity and vendor exploit density over the past 5 quarters (Q2 2025 – Q2 2026).
@@ -40,7 +40,7 @@ export default function RiskyTechCharts() {
                   Average Vendor Score Over Time
                 </h3>
                 <p className="text-[14px] text-[#6b7280] mt-1">
-                  In the past quarter, the average vendor score in the Risky Tech Ranking increased <strong className="text-[#0a0a0b] font-semibold">11%</strong>.
+                  In the past quarter, the average vendor score in the Barbon Risk Index increased <strong className="text-[#0a0a0b] font-semibold">11%</strong>.
                 </p>
               </div>
               <div className="px-2.5 py-1 bg-emerald-50 text-emerald-700 font-semibold text-[12px] rounded-full flex items-center gap-1 shrink-0">
@@ -87,7 +87,7 @@ export default function RiskyTechCharts() {
                   Contributing Vulnerabilities Over Time
                 </h3>
                 <p className="text-[14px] text-[#6b7280] mt-1">
-                  In the past quarter, the number of contributing vulnerabilities in the Risky Tech Ranking increased <strong className="text-[#0a0a0b] font-semibold">18%</strong>.
+                  In the past quarter, the number of contributing vulnerabilities in the Barbon Risk Index increased <strong className="text-[#0a0a0b] font-semibold">18%</strong>.
                 </p>
               </div>
               <div className="px-2.5 py-1 bg-amber-50 text-amber-700 font-semibold text-[12px] rounded-full flex items-center gap-1 shrink-0">

@@ -8,14 +8,14 @@ import RiskyTechCharts from '@/components/sections/RiskyTechCharts';
 import RiskyTechCTA from '@/components/sections/RiskyTechCTA';
 
 export const metadata: Metadata = {
-  title: 'Risky Tech Ranking 2026 - Technology Risk Index | Barbon',
+  title: 'Barbon Risk Index 2026 - Technology Risk Index | Barbon',
   description:
-    'Explore the 2026 Risky Tech Ranking: A data-driven index evaluating commercial technology providers based on vulnerability exploitability, NIST CPE mapping, and threat score density.',
+    'Explore the 2026 Barbon Risk Index: A data-driven index evaluating commercial technology providers based on vulnerability exploitability, NIST CPE mapping, and threat score density.',
   alternates: {
     canonical: 'https://barbon.tech/risky-tech',
   },
   openGraph: {
-    title: 'Risky Tech Ranking 2026 | Barbon OS Risk Intelligence',
+    title: 'Barbon Risk Index 2026 | Barbon OS Risk Intelligence',
     description:
       'Continuous evaluation of technology vendors scored by exploitability and vulnerability density to empower informed cyber underwriting and enterprise technology decisions.',
     url: 'https://barbon.tech/risky-tech',

@@ -52,7 +52,7 @@ export default function RiskyTechHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-[40px] md:text-[54px] lg:text-[62px] font-extrabold tracking-[-0.03em] leading-[1.06] text-[#0a0a0b] mb-6 text-balance"
           >
-            Risky Tech Ranking
+            Barbon Risk Index
           </motion.h1>
 
           {/* Description */}
@@ -62,7 +62,7 @@ export default function RiskyTechHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-[18px] md:text-[20px] text-[#6b7280] leading-[1.6] mb-10 text-pretty max-w-3xl"
           >
-            The <strong className="text-[#0a0a0b] font-semibold">Risky Tech Ranking</strong> is a continuous index of technology providers whose products were vulnerable to exploitation by threat actors. The ranking leverages public data, threat intelligence, and machine learning exploitability models to help underwriters, brokers, and enterprise security leaders make better-informed technology adoption and cyber risk decisions.
+            The <strong className="text-[#0a0a0b] font-semibold">Barbon Risk Index</strong> is a continuous index of technology providers whose products were vulnerable to exploitation by threat actors. The ranking leverages public data, threat intelligence, and machine learning exploitability models to help underwriters, brokers, and enterprise security leaders make better-informed technology adoption and cyber risk decisions.
           </motion.p>
 
           {/* Navigation Pills / Tabs */}
@@ -73,7 +73,7 @@ export default function RiskyTechHero() {
             className="flex flex-wrap gap-2 pt-2 border-t border-[#e5e7eb]"
           >
             {[
-              { id: 'vendor-ranking-table', tab: 'ranking', label: 'Risky Tech Ranking', icon: ShieldAlert },
+              { id: 'vendor-ranking-table', tab: 'ranking', label: 'Barbon Risk Index', icon: ShieldAlert },
               { id: 'why-we-built-this', tab: 'why', label: 'Why We Built This', icon: BookOpen },
               { id: 'vendor-comparison', tab: 'comparison', label: 'Vendor Comparison & Analytics', icon: Layers },
               { id: 'methodology-section', tab: 'methodology', label: 'Methodology & CPE Mapping', icon: Cpu },
@@ -111,13 +111,13 @@ export default function RiskyTechHero() {
             <div className="space-y-3 max-w-3xl">
               <div className="flex items-center gap-2 text-[#0165FC] font-semibold text-[13px] tracking-wide uppercase">
                 <CheckCircle2 size={16} />
-                <span>How the Risky Tech Ranking was created</span>
+                <span>How the Barbon Risk Index was created</span>
               </div>
               <h2 className="text-[20px] md:text-[24px] font-bold text-[#0f172a] tracking-tight">
                 Empowered by the Barbon Exploit Scoring System (BESS)¹ & NIST CPE Dictionary
               </h2>
               <p className="text-[14px] md:text-[15px] text-[#475569] leading-[1.65]">
-                To create the Risky Tech Ranking, we use the <strong>Barbon Exploit Scoring System (BESS)¹</strong> to score vulnerabilities that appear in the National Institute of Standards and Technology’s (NIST) Official Common Platform Enumeration (CPE) Dictionary. We map vulnerabilities from the National Vulnerability Database (NVD) to vendors using NIST enrichment, scoring vendors by adding up all of their vulnerabilities weighted by real-world exploitability over time.
+                To create the Barbon Risk Index, we use the <strong>Barbon Exploit Scoring System (BESS)¹</strong> to score vulnerabilities that appear in the National Institute of Standards and Technology's (NIST) Official Common Platform Enumeration (CPE) Dictionary. We map vulnerabilities from the National Vulnerability Database (NVD) to vendors using NIST enrichment, scoring vendors by adding up all of their vulnerabilities weighted by real-world exploitability over time.
               </p>
             </div>
             <a

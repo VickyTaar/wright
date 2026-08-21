@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CTA from '@/components/sections/CTA';
-import { ArrowRight, FileText, BookOpen, BarChart3 } from 'lucide-react';
+import { ArrowRight, FileText, BookOpen, BarChart3, Newspaper } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Insights - Barbon',
@@ -60,12 +60,48 @@ const resources = [
     description: 'A practical guide for underwriters evaluating AI risk - covering governance frameworks, regulatory landscape, and assessment criteria.',
     href: '/resources/ai-governance-guide',
   },
+  {
+    type: 'Article',
+    icon: Newspaper,
+    title: 'Cyber Insurance in Africa: The CISO\'s Guide to Cyber Risk Insurance',
+    description: 'Cyber insurance is becoming critical across Africa. Learn what CISOs need to know about choosing the right provider - and why technology risk intelligence matters.',
+    href: '/resources/cyber-insurance-africa',
+  },
+  {
+    type: 'Article',
+    icon: Newspaper,
+    title: 'Cyber Insurance in Kenya: A CISO\'s Guide to Choosing the Right Provider',
+    description: "Kenya's digital economy is creating new forms of cyber risk. Choosing the right cyber insurance provider requires a deeper understanding of technology risk.",
+    href: '/resources/cyber-insurance-kenya',
+  },
+  {
+    type: 'Article',
+    icon: Newspaper,
+    title: 'How CISOs Should Choose Cyber Insurance in 2026',
+    description: 'A practical eight-step guide for CISOs on evaluating cyber insurance providers - from attack surface mapping to incident response and underwriting expertise.',
+    href: '/resources/ciso-cyber-insurance-guide-2026',
+  },
+  {
+    type: 'Article',
+    icon: Newspaper,
+    title: 'Cyber Insurance for Intellectual Property: Protecting Your Most Valuable Digital Assets',
+    description: 'Source code, AI models, trade secrets - your most valuable assets may be digital. Learn how cyber insurance and technology risk intelligence can protect them.',
+    href: '/resources/cyber-insurance-intellectual-property',
+  },
+  {
+    type: 'Article',
+    icon: Newspaper,
+    title: 'Best Cyber Insurance Providers in Kenya: What CISOs Should Look For',
+    description: "Searching for the best cyber insurance in Kenya? Start by looking beyond the premium. A guide for CISOs and risk executives on evaluating providers.",
+    href: '/resources/best-cyber-insurance-kenya',
+  },
 ];
 
 const typeColors: Record<string, string> = {
   Guide:     'bg-[#e8f0fe] text-[#0165FC]',
   Framework: 'bg-[#f7f8fa] text-[#6b7280]',
   Overview:  'bg-[#ecfdf5] text-[#059669]',
+  Article:   'bg-[#fdf4ff] text-[#7c3aed]',
 };
 
 export default function ResourcesPage() {

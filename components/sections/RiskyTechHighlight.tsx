@@ -32,7 +32,7 @@ export default function RiskyTechHighlight() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-[32px] md:text-[44px] font-bold tracking-[-0.02em] text-[#0a0a0b] leading-[1.1]"
             >
-              Risky Tech Ranking 2026
+              Barbon Risk Index 2026
             </motion.h2>
 
             <motion.p
@@ -92,7 +92,7 @@ export default function RiskyTechHighlight() {
                 id="homepage-risky-tech-cta"
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 text-[15px] font-semibold text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-xl transition-all shadow-md hover:shadow-[#0165FC]/25 group"
               >
-                <span>Explore Full Risky Tech Ranking</span>
+                <span>Explore Full Barbon Risk Index</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -114,7 +114,7 @@ export default function RiskyTechHighlight() {
                     #1
                   </div>
                   <div>
-                    <h3 className="font-bold text-[15px]">Top Risky Tech Snapshot</h3>
+                    <h3 className="font-bold text-[15px]">Top Barbon Risk Snapshot</h3>
                     <p className="text-[12px] text-[#94a3b8]">Barbon Risk Score Index</p>
                   </div>
                 </div>

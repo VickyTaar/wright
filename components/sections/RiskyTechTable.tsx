@@ -45,7 +45,7 @@ export default function RiskyTechTable() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           <div>
             <h2 className="text-[24px] md:text-[30px] font-bold text-[#0a0a0b] tracking-tight">
-              Risky Tech Vendor Ranking
+              Barbon Risk Index — Vendor Rankings
             </h2>
             <p className="text-[14px] text-[#6b7280] mt-1">
               Showing tech providers mapped via NIST Common Platform Enumeration (CPE) weighted by exploit density.
@@ -66,7 +66,7 @@ export default function RiskyTechTable() {
             </div>
             <button
               type="button"
-              onClick={() => alert('Downloading full 2026 Risky Tech Ranking dataset CSV...')}
+              onClick={() => alert('Downloading full 2026 Barbon Risk Index dataset CSV...')}
               className="inline-flex items-center gap-2 px-3.5 py-2.5 text-[13px] font-medium text-[#0a0a0b] bg-[#f7f8fa] border border-[#e5e7eb] hover:bg-[#e8f0fe] rounded-lg transition-colors shrink-0"
               title="Export CSV dataset"
             >

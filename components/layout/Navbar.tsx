@@ -9,7 +9,7 @@ import Logo from '@/components/ui/Logo';
 const navLinks = [
   { label: 'Cyber Risk', href: '/platform' },
   { label: 'AI Assurance', href: '/ai' },
-  { label: 'Risky Tech', href: '/risky-tech', badge: 'NEW' },
+  { label: 'Risk Index', href: '/risky-tech', badge: 'NEW' },
   { label: 'Our Approach', href: '/security' },
   { label: 'Who We Serve', href: '/solutions' },
   { label: 'Insights', href: '/resources' },

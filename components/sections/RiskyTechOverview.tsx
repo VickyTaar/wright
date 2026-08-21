@@ -13,10 +13,10 @@ export default function RiskyTechOverview() {
             <span>Overview & Key Metrics</span>
           </div>
           <h2 className="text-[28px] md:text-[36px] font-bold text-[#0a0a0b] tracking-tight">
-            Risky Tech Ranking Overview
+            Barbon Risk Index Overview
           </h2>
           <p className="text-[16px] text-[#6b7280] mt-2">
-            A snapshot of the technology providers highlighted in the Risky Tech Ranking and the vulnerabilities assessed across global commercial exposures.
+            A snapshot of the technology providers highlighted in the Barbon Risk Index and the vulnerabilities assessed across global commercial exposures.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function RiskyTechOverview() {
             </div>
 
             <p className="text-[15px] text-[#475569] leading-relaxed">
-              Total number of vulnerabilities evaluated by Barbon in the Risky Tech Ranking during the current 12-month review period.
+              Total number of vulnerabilities evaluated by Barbon in the Barbon Risk Index during the current 12-month review period.
             </p>
 
             <div className="mt-6 pt-4 border-t border-[#e5e7eb] flex items-center justify-between text-[13px]">

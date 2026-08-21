@@ -42,7 +42,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-8 text-[12px] font-semibold text-[#0165FC] bg-[#e8f0fe] border border-[#c7d8fd] rounded-full hover:bg-[#dae6fe] transition-all shadow-2xs group"
               >
                 <span className="w-2 h-2 rounded-full bg-[#0165FC] animate-pulse" />
-                <span>NEW: 2026 Risky Tech Ranking Released</span>
+                <span>NEW: 2026 Barbon Risk Index Released</span>
                 <ChevronRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </motion.div>
