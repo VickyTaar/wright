@@ -48,6 +48,15 @@ export default function CISOCyberInsuranceGuidePage() {
               Cyber insurance is increasingly becoming a board-level risk management conversation. The question
               is no longer whether to buy a policy — it&apos;s which provider actually understands your risk.
             </p>
+            <div className="flex items-center gap-3 mt-8 pt-6 border-t border-[#e5e7eb]">
+              <div className="w-9 h-9 rounded-full bg-[#0165FC] flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-[13px] font-bold">V</span>
+              </div>
+              <div>
+                <p className="text-[13px] font-semibold text-[#0a0a0b]">Victor Ndiritu</p>
+                <p className="text-[12px] text-[#9ca3af]">Barbon Intelligent Technologies</p>
+              </div>
+            </div>
           </div>
         </div>
 
