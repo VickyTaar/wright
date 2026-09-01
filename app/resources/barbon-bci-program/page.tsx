@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CTA from '@/components/sections/CTA';
+import BCIBrokerForm from '@/components/sections/BCIBrokerForm';
 
 export const metadata: Metadata = {
   title: 'Introducing the Barbon BCI Program | Barbon',
@@ -388,6 +389,22 @@ export default function BarbonBCIProgramPage() {
                     <p className="text-[#a1a1aa] text-[13px] mt-2">From cyber risk to cyber insurance.</p>
                   </div>
                 </div>
+              </section>
+
+              {/* Register Interest Form */}
+              <section aria-labelledby="bci-register" className="mb-14">
+                <h2
+                  id="bci-register"
+                  className="text-[24px] font-bold tracking-[-0.015em] text-[#0a0a0b] mb-2"
+                >
+                  Register your interest
+                </h2>
+                <p className="text-[16px] text-[#4b5563] leading-[1.8] mb-6">
+                  If you are an insurance broker interested in the Barbon BCI
+                  Program, fill in the form below and a member of our team will
+                  be in touch.
+                </p>
+                <BCIBrokerForm />
               </section>
 
             </div>
