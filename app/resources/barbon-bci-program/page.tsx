@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CTA from '@/components/sections/CTA';
-import BCIBrokerForm from '@/components/sections/BCIBrokerForm';
 
 export const metadata: Metadata = {
   title: 'Introducing the Barbon BCI Program | Barbon',
   description:
-    'Barbon BCI — the Barbon Cyber Insurance Program — gives insurance brokers a structured way to identify clients with meaningful technology exposure, understand their risk, and create a pathway toward cyber insurance.',
+    'Barbon BCI, the Barbon Cyber Insurance Program, gives insurance brokers a structured way to identify clients with meaningful technology exposure, understand their risk, and create a pathway toward cyber insurance.',
   alternates: {
     canonical: 'https://barbon.tech/resources/barbon-bci-program',
   },
@@ -391,20 +391,31 @@ export default function BarbonBCIProgramPage() {
                 </div>
               </section>
 
-              {/* Register Interest Form */}
+              {/* Register Interest CTA */}
               <section aria-labelledby="bci-register" className="mb-14">
-                <h2
-                  id="bci-register"
-                  className="text-[24px] font-bold tracking-[-0.015em] text-[#0a0a0b] mb-2"
-                >
-                  Register your interest
-                </h2>
-                <p className="text-[16px] text-[#4b5563] leading-[1.8] mb-6">
-                  If you are an insurance broker interested in the Barbon BCI
-                  Program, fill in the form below and a member of our team will
-                  be in touch.
-                </p>
-                <BCIBrokerForm />
+                <div className="bg-[#0a0a0b] rounded-[8px] p-8">
+                  <p className="text-[12px] font-semibold uppercase tracking-widest text-[#4b5563] mb-3">
+                    Barbon BCI Program
+                  </p>
+                  <h2
+                    id="bci-register"
+                    className="text-[22px] font-bold text-white tracking-[-0.015em] mb-3"
+                  >
+                    Interested in the BCI Program?
+                  </h2>
+                  <p className="text-[15px] text-[#a1a1aa] leading-[1.7] mb-6 max-w-md">
+                    If you are an insurance broker looking to build cyber insurance into your client offering, register your interest and a member of our team will be in touch.
+                  </p>
+                  <Link
+                    href="/resources/barbon-bci-program/register"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 text-[14px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors group"
+                  >
+                    Register interest
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" className="group-hover:translate-x-0.5 transition-transform">
+                      <path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </Link>
+                </div>
               </section>
 
             </div>

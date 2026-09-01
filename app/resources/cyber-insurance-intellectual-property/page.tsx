@@ -31,7 +31,7 @@ export default function CyberInsuranceIPPage() {
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-2xl">
               For many modern organizations, the most valuable assets are no longer physical. They are digital.
-              Understanding what&apos;s at risk — and whether your insurer understands it — is essential.
+              Understanding what&apos;s at risk, and whether your insurer understands it, is essential.
             </p>
             <div className="flex items-center gap-3 mt-8 pt-6 border-t border-[#e5e7eb]">
               <div className="w-9 h-9 rounded-full bg-[#0165FC] flex items-center justify-center flex-shrink-0">

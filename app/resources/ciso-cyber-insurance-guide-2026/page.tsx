@@ -46,7 +46,7 @@ export default function CISOCyberInsuranceGuidePage() {
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-2xl">
               Cyber insurance is increasingly becoming a board-level risk management conversation. The question
-              is no longer whether to buy a policy — it&apos;s which provider actually understands your risk.
+              is no longer whether to buy a policy: it&apos;s which provider actually understands your risk.
             </p>
             <div className="flex items-center gap-3 mt-8 pt-6 border-t border-[#e5e7eb]">
               <div className="w-9 h-9 rounded-full bg-[#0165FC] flex items-center justify-center flex-shrink-0">

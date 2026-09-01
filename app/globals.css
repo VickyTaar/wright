@@ -55,6 +55,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Select / dropdown fix — prevents the tinted background from bleeding into
+   the native OS option list, which shows as a white/washed-out overlay */
+select {
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+select option {
+  background-color: #ffffff;
+  color: #0a0a0b;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {

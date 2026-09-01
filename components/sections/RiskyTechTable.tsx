@@ -45,7 +45,7 @@ export default function RiskyTechTable() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           <div>
             <h2 className="text-[24px] md:text-[30px] font-bold text-[#0a0a0b] tracking-tight">
-              Barbon Risk Index — Vendor Rankings
+              Barbon Risk Index: Vendor Rankings
             </h2>
             <p className="text-[14px] text-[#6b7280] mt-1">
               Showing tech providers mapped via NIST Common Platform Enumeration (CPE) weighted by exploit density.

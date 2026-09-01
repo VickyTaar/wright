@@ -22,7 +22,7 @@ const resources = [
     type: 'Article',
     icon: Newspaper,
     title: 'Introducing the Barbon BCI Program',
-    description: 'Barbon BCI — the Barbon Cyber Insurance Program — gives insurance brokers a structured way to identify clients with meaningful technology exposure and turn cyber risk into cyber insurance opportunities.',
+    description: 'Barbon BCI, the Barbon Cyber Insurance Program, gives insurance brokers a structured way to identify clients with meaningful technology exposure and turn cyber risk into cyber insurance opportunities.',
     href: '/resources/barbon-bci-program',
   },
   {
