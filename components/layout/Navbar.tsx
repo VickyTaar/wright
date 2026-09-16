@@ -74,7 +74,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-3 py-1.5 text-[13px] font-medium transition-all duration-150 rounded-full flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`relative px-2.5 py-1.5 text-[13px] font-medium transition-all duration-150 rounded-full flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
                       ? 'bg-white text-[#0a0a0b] shadow-sm font-semibold'
                       : 'text-[#64748b] hover:text-[#0f172a] hover:bg-white/70'
