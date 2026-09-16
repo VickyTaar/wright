@@ -12,6 +12,7 @@ const navLinks = [
   { label: 'Risk Index', href: '/risky-tech', badge: 'NEW' },
   { label: 'Our Approach', href: '/security' },
   { label: 'Who We Serve', href: '/solutions' },
+  { label: 'Barbon CIA', href: '/cyber-insurance-academy', badge: 'NEW' },
   { label: 'Insights', href: '/resources' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

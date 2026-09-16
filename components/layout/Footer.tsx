@@ -27,6 +27,7 @@ const footerNav = {
     label: 'Company',
     links: [
       { label: 'About Barbon', href: '/about' },
+      { label: 'Barbon CIA', href: '/cyber-insurance-academy' },
       { label: 'Our Approach', href: '/security' },
       { label: 'Insights', href: '/resources' },
       { label: 'Contact', href: '/contact' },
