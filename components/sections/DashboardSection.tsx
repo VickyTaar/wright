@@ -39,20 +39,20 @@ export default function DashboardSection() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Risk Intelligence Platform
           </p>
           <h2
             id="dashboard-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Built for the underwriters
             <br />
             who decide.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            Every signal from every corner of an organization&apos;s technology environment - transformed into insurance intelligence. Risk scores, posture trends, and
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
+            Every signal from every corner of an organization&apos;s technology environment — transformed into insurance intelligence. Risk scores, posture trends, and
             threat indicators in one structured view.
           </p>
         </div>

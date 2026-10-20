@@ -72,20 +72,20 @@ export default function Industries() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Who We Serve
           </p>
           <h2
             id="industries-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Trusted across the
             <br />
             technology insurance ecosystem.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
-            One intelligence platform - configured for every stakeholder involved
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
+            One intelligence platform — configured for every stakeholder involved
             in underwriting, managing, and insuring modern technology risk.
           </p>
         </div>

@@ -10,11 +10,11 @@ const pillars = [
 export default function TrustBar() {
   return (
     <section
-      className="border-y border-[#e5e7eb] bg-[#f7f8fa] py-10"
+      className="border-y border-[#e5e7eb] bg-[#f7f8fa] py-12"
       aria-label="Platform trust indicators"
     >
       <div className="container-site">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20">
           {/* Statement */}
           <div className="flex-1 max-w-md">
             <p className="text-[15px] font-medium text-[#0a0a0b] leading-snug">

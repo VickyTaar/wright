@@ -91,21 +91,21 @@ export default function Integrations() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Signal Sources
           </p>
           <h2
             id="integrations-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Signals collected from
             <br />
             every layer of the environment.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
             Our platform aggregates intelligence from every layer of an organization&apos;s
-            digital infrastructure - cloud platforms, identity providers, endpoint
+            digital infrastructure — cloud platforms, identity providers, endpoint
             protection, threat intelligence feeds, and beyond.
           </p>
         </div>

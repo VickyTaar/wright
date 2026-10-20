@@ -71,21 +71,21 @@ export default function Security() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             AI Risk Assurance
           </p>
           <h2
             id="security-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-white mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-white mb-6"
           >
             Enabling insurers to confidently
             <br />
             underwrite AI systems.
           </h2>
-          <p className="text-[17px] text-[#9ca3af] leading-[1.7]">
+          <p className="text-[17px] text-[#9ca3af] leading-[1.7] max-w-xl">
             Businesses are rapidly deploying AI agents capable of making autonomous
-            decisions - approving purchases, managing infrastructure, executing
+            decisions — approving purchases, managing infrastructure, executing
             workflows. Yet one question remains unanswered: who bears financial
             responsibility when an AI system independently causes loss? Barbon
             exists to answer that question.

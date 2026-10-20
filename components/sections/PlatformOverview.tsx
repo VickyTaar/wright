@@ -87,35 +87,35 @@ export default function PlatformOverview() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Cyber Risk Intelligence
           </p>
           <h2
             id="platform-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Continuous risk intelligence.
             <br />
             Across the entire policy lifecycle.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
             Barbon enables insurers and brokers to confidently issue and manage
-            cyber insurance through continuous technical assessment - replacing
+            cyber insurance through continuous technical assessment — replacing
             the annual questionnaire with ongoing, measurable intelligence.
           </p>
         </div>
 
         {/* Service grid */}
         <div
-          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden mb-10"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden mb-10"
           role="list"
         >
           {services.map((svc) => (
             <div
               key={svc.name}
               role="listitem"
-              className="bg-white p-5 hover:bg-[#f7f8fa] transition-colors duration-150 group cursor-default"
+              className="bg-white p-6 hover:bg-[#f7f8fa] transition-colors duration-150 group cursor-default"
             >
               <div className="flex items-center gap-2.5 mb-3">
                 <div className="w-7 h-7 rounded-[5px] bg-[#e8f0fe] flex items-center justify-center flex-shrink-0 group-hover:bg-[#c7d8fd] transition-colors">

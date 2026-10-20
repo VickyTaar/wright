@@ -120,7 +120,7 @@ export default function Navbar() {
           <div className="flex-1" />
 
           {/* Contact + CTA */}
-          <div className="hidden md:flex items-center gap-2 shrink-0">
+          <div className="hidden md:flex items-center gap-3 shrink-0 pr-2 md:pr-4 lg:pr-6">
             <Link
               href="/contact"
               className={`px-3.5 py-2 text-[13.5px] font-medium rounded-lg transition-all whitespace-nowrap ${
@@ -134,7 +134,7 @@ export default function Navbar() {
             <Link
               href="/demo"
               id="nav-cta"
-              className="group inline-flex items-center gap-2 px-4 py-2 text-[13.5px] font-semibold text-white bg-gradient-to-r from-[#0165FC] to-[#0052d4] hover:from-[#0052d4] hover:to-[#003db5] rounded-full shadow-md hover:shadow-lg hover:shadow-[#0165FC]/20 transition-all duration-200 whitespace-nowrap"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 text-[13.5px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] active:bg-[#003db5] rounded-full shadow-sm hover:shadow-md transition-all duration-200 whitespace-nowrap"
             >
               Request a Briefing
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />

@@ -95,35 +95,35 @@ export default function Features() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Signal Coverage
           </p>
           <h2
             id="features-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Every signal.
             <br />
             Every environment. Continuously.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
             Our platform continuously collects and analyzes signals from across an
-            organization&apos;s entire technology environment - transforming raw technical
+            organization&apos;s entire technology environment — transforming raw technical
             data into structured underwriting intelligence.
           </p>
         </div>
 
         {/* Capabilities grid */}
         <div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-[#e5e7eb] border border-[#e5e7eb] rounded-[8px] overflow-hidden"
           role="list"
         >
           {capabilities.map((cap) => (
             <div
               key={cap.name}
               role="listitem"
-              className="bg-white p-5 hover:bg-[#f7f8fa] transition-colors group cursor-default"
+              className="bg-white p-6 hover:bg-[#f7f8fa] transition-colors group cursor-default"
             >
               <div className="w-7 h-7 rounded-[5px] bg-[#f7f8fa] border border-[#e5e7eb] flex items-center justify-center mb-3 group-hover:border-[#c7d8fd] group-hover:bg-[#e8f0fe] transition-colors">
                 <cap.icon size={14} className="text-[#6b7280] group-hover:text-[#0165FC] transition-colors" />

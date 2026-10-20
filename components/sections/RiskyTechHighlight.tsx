@@ -9,7 +9,7 @@ export default function RiskyTechHighlight() {
   const topVendors = RISKY_TECH_VENDORS.slice(0, 5);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-[#f8fafc] to-white border-y border-[#e5e7eb] relative overflow-hidden">
+    <section className="section-spacing bg-[#f7f8fa] border-y border-[#e5e7eb] relative overflow-hidden">
       <div className="container-site relative">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Context & Overview */}
@@ -53,7 +53,7 @@ export default function RiskyTechHighlight() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="grid grid-cols-2 gap-4 py-2"
             >
-              <div className="p-4 bg-white border border-[#e5e7eb] rounded-xl shadow-2xs">
+              <div className="p-4 bg-white border border-[#e5e7eb] rounded-[6px]">
                 <div className="text-[12px] font-bold uppercase tracking-wider text-[#9ca3af] mb-1">
                   Vulnerabilities Assessed
                 </div>
@@ -66,7 +66,7 @@ export default function RiskyTechHighlight() {
                 </div>
               </div>
 
-              <div className="p-4 bg-white border border-[#e5e7eb] rounded-xl shadow-2xs">
+              <div className="p-4 bg-white border border-[#e5e7eb] rounded-[6px]">
                 <div className="text-[12px] font-bold uppercase tracking-wider text-[#9ca3af] mb-1">
                   Vendors Scored
                 </div>
@@ -90,10 +90,10 @@ export default function RiskyTechHighlight() {
               <Link
                 href="/risky-tech"
                 id="homepage-risky-tech-cta"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 text-[15px] font-semibold text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-xl transition-all shadow-md hover:shadow-[#0165FC]/25 group"
+                className="inline-flex items-center gap-2 px-5 py-3 text-[15px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] rounded-[6px] transition-colors duration-150 group"
               >
                 <span>Explore Full Barbon Risk Index</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </motion.div>
           </div>
@@ -105,7 +105,7 @@ export default function RiskyTechHighlight() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white border border-[#e5e7eb] rounded-2xl shadow-xl overflow-hidden"
+              className="bg-white border border-[#e5e7eb] rounded-[8px] overflow-hidden"
             >
               {/* Card Header */}
               <div className="p-5 bg-[#0f172a] text-white flex items-center justify-between">

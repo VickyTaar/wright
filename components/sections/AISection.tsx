@@ -20,19 +20,19 @@ export default function AISection() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Our Underwriting Approach
           </p>
           <h2
             id="ai-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Beyond the questionnaire.
             <br />
             Into the infrastructure.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
             Rather than asking whether a client has antivirus software, Barbon answers
             the questions that actually determine underwriting outcomes. How likely is
             this organization to experience a cyber incident over the next twelve months?

@@ -39,19 +39,19 @@ export default function WhyBarbonOS() {
     >
       <div className="container-site">
         {/* Header */}
-        <div className="max-w-2xl mb-14">
-          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
             Why Barbon
           </p>
           <h2
             id="why-heading"
-            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-5"
+            className="text-[36px] md:text-[44px] font-bold tracking-[-0.02em] leading-[1.1] text-[#0a0a0b] mb-6"
           >
             Built for the next decade
             <br />
             of technology risk.
           </h2>
-          <p className="text-[17px] text-[#6b7280] leading-[1.7]">
+          <p className="text-[17px] text-[#6b7280] leading-[1.7] max-w-xl">
             Technology risk has outgrown traditional underwriting models. Cyber threats
             change every hour. AI systems evolve continuously. Barbon exists to close
             the gap between what technology actually does and what insurers can see.

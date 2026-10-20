@@ -8,7 +8,7 @@ import HeroDashboard from '@/components/mockups/HeroDashboard';
 export default function Hero() {
   return (
     <section
-      className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-white overflow-hidden"
+      className="relative pt-36 pb-20 md:pt-44 md:pb-28 bg-white overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Subtle grid pattern */}

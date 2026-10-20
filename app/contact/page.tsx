@@ -29,12 +29,12 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main id="main-content">
-        <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
+        <div className="pt-36 pb-16 bg-white border-b border-[#e5e7eb]">
           <div className="container-site">
-            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
+            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
               Contact
             </p>
-            <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
+            <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-6 max-w-2xl">
               Get in touch.
             </h1>
             <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">

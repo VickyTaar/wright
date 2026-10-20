@@ -40,7 +40,7 @@ export default function ContactForm() {
             required
             autoComplete="name"
             disabled={state.submitting}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
+            className="w-full px-3 py-2 text-[13px] text-[#0a0a0b] border border-[#d1d5db] rounded-[5px] bg-[#f7f8fa] hover:border-[#9ca3af] hover:bg-white focus:bg-white focus:border-[#0165FC] focus:ring-1 focus:ring-[#0165FC] focus:outline-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed placeholder:text-[#6b7280]"
             placeholder="Amara Kamara"
           />
           <ValidationError field="name" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
@@ -56,7 +56,7 @@ export default function ContactForm() {
             required
             autoComplete="email"
             disabled={state.submitting}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
+            className="w-full px-3 py-2 text-[13px] text-[#0a0a0b] border border-[#d1d5db] rounded-[5px] bg-[#f7f8fa] hover:border-[#9ca3af] hover:bg-white focus:bg-white focus:border-[#0165FC] focus:ring-1 focus:ring-[#0165FC] focus:outline-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed placeholder:text-[#6b7280]"
             placeholder="amara@company.com"
           />
           <ValidationError field="email" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
@@ -74,7 +74,7 @@ export default function ContactForm() {
             name="company"
             autoComplete="organization"
             disabled={state.submitting}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
+            className="w-full px-3 py-2 text-[13px] text-[#0a0a0b] border border-[#d1d5db] rounded-[5px] bg-[#f7f8fa] hover:border-[#9ca3af] hover:bg-white focus:bg-white focus:border-[#0165FC] focus:ring-1 focus:ring-[#0165FC] focus:outline-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed placeholder:text-[#6b7280]"
             placeholder="Acacia Insurance Ltd"
           />
         </div>
@@ -86,16 +86,16 @@ export default function ContactForm() {
             id="contact-role"
             name="role"
             disabled={state.submitting}
-            className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors disabled:opacity-60"
+            className="w-full px-3 py-2 text-[13px] text-[#0a0a0b] border border-[#d1d5db] rounded-[5px] bg-[#f7f8fa] hover:border-[#9ca3af] hover:bg-white focus:bg-white focus:border-[#0165FC] focus:ring-1 focus:ring-[#0165FC] focus:outline-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
           >
             <option value="">Select role</option>
-            <option>CTO / CIO</option>
-            <option>CEO / MD</option>
-            <option>Head of Operations</option>
-            <option>Head of IT</option>
-            <option>Product Manager</option>
-            <option>Developer</option>
-            <option>Other</option>
+            <option value="CTO / CIO">CTO / CIO</option>
+            <option value="CEO / MD">CEO / MD</option>
+            <option value="Head of Operations">Head of Operations</option>
+            <option value="Head of IT">Head of IT</option>
+            <option value="Product Manager">Product Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="Other">Other</option>
           </select>
         </div>
       </div>
@@ -110,7 +110,7 @@ export default function ContactForm() {
           required
           rows={4}
           disabled={state.submitting}
-          className="w-full px-3 py-2 text-[13px] border border-[#e5e7eb] rounded-[5px] bg-[#f7f8fa] focus:bg-white focus:border-[#0165FC] focus:outline-none transition-colors resize-none disabled:opacity-60"
+          className="w-full px-3 py-2 text-[13px] text-[#0a0a0b] border border-[#d1d5db] rounded-[5px] bg-[#f7f8fa] hover:border-[#9ca3af] hover:bg-white focus:bg-white focus:border-[#0165FC] focus:ring-1 focus:ring-[#0165FC] focus:outline-none transition-colors resize-none disabled:opacity-60 disabled:cursor-not-allowed placeholder:text-[#6b7280]"
           placeholder="Tell us about your business and what you're looking to achieve..."
         />
         <ValidationError field="message" errors={state.errors} className="mt-1 text-[11px] text-red-500" />
@@ -119,44 +119,17 @@ export default function ContactForm() {
       {/* Form-level errors (e.g. network, spam block) */}
       <ValidationError errors={state.errors} className="text-[12px] text-red-500" />
 
-      {/* Uiverse animated send button */}
+      {/* Submit button */}
       <button
         type="submit"
         disabled={state.submitting}
-        className="send-btn"
+        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[14px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] active:bg-[#003db5] rounded-[6px] transition-colors disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0165FC]"
       >
-        <div className="outline" />
-
-        {/* Default state — plane + "Send message" */}
-        <div className="state state--default">
-          <div className="icon">
-            {/* Paper-plane SVG */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <line x1="22" y1="2" x2="11" y2="13"/>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-            </svg>
-          </div>
-          <p>
-            {/* "Send" — span 4 (d) gets margin-right via CSS nth-child(4) */}
-            {['S','e','n','d','m','e','s','s','a','g','e'].map((letter, i) => (
-              <span key={i} style={{ '--i': i } as React.CSSProperties}>{letter}</span>
-            ))}
-          </p>
-        </div>
-
-        {/* Sent state — checkmark + "Sent!" */}
-        <div className="state state--sent">
-          <div className="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0165FC" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </div>
-          <p>
-            {['S','e','n','t','!'].map((letter, i) => (
-              <span key={i} style={{ '--i': i } as React.CSSProperties}>{letter}</span>
-            ))}
-          </p>
-        </div>
+        <span>{state.submitting ? 'Sending...' : 'Send message'}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
       </button>
     </form>
   );
