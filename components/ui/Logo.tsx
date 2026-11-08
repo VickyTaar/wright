@@ -8,16 +8,16 @@ interface LogoProps {
 }
 
 export default function Logo({
-  size = 28,
+  size = 26,
   showText = true,
   className = '',
-  textClassName = 'text-[15px] font-semibold tracking-tight text-[#0a0a0b]',
+  textClassName = 'text-[17px] font-serif font-semibold tracking-tight text-[#141413]',
 }: LogoProps) {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
       <Image
         src="/logo.png"
-        alt="Barbon Logo"
+        alt="Barbon"
         width={size}
         height={size}
         className="object-contain"

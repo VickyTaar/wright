@@ -2,17 +2,15 @@ import { type ReactNode } from 'react';
 
 interface BadgeProps {
   children: ReactNode;
-  variant?: 'default' | 'blue' | 'green' | 'amber' | 'red' | 'mono';
+  variant?: 'default' | 'navy' | 'paper' | 'muted';
   className?: string;
 }
 
 const badgeVariants = {
-  default: 'bg-[#f7f8fa] text-[#6b7280] border border-[#e5e7eb]',
-  blue: 'bg-[#e8f0fe] text-[#0165FC] border border-[#c7d8fd]',
-  green: 'bg-[#ecfdf5] text-[#059669] border border-[#a7f3d0]',
-  amber: 'bg-[#fffbeb] text-[#b45309] border border-[#fde68a]',
-  red: 'bg-[#fef2f2] text-[#dc2626] border border-[#fecaca]',
-  mono: 'bg-[#0a0a0b] text-[#e5e7eb] border border-[#27272a] font-mono',
+  default: 'bg-[#F4F3EE] text-[#4A4A45] border border-[#E5E3DC]',
+  navy: 'bg-[#F0F4F7] text-[#0F2537] border border-[#C8D6E2]',
+  paper: 'bg-[#FFFFFF] text-[#141413] border border-[#D5D2C7]',
+  muted: 'bg-transparent text-[#767670] border border-[#E5E3DC]',
 };
 
 export default function Badge({
@@ -22,7 +20,7 @@ export default function Badge({
 }: BadgeProps) {
   return (
     <span
-      className={`inline-flex items-center gap-1 px-2 py-0.5 text-[11px] font-medium rounded-[4px] ${badgeVariants[variant]} ${className}`}
+      className={`inline-flex items-center gap-1.5 px-2 py-0.5 text-[11px] font-mono tracking-tight uppercase rounded-[2px] ${badgeVariants[variant]} ${className}`}
     >
       {children}
     </span>

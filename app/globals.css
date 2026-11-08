@@ -2,37 +2,46 @@
 
 @theme inline {
   /* Colors */
-  --color-wright-blue: #0165FC;
-  --color-wright-blue-dark: #0052d4;
-  --color-wright-blue-light: #e8f0fe;
-  --color-background: #ffffff;
-  --color-surface: #f7f8fa;
-  --color-border: #e5e7eb;
-  --color-border-strong: #d1d5db;
-  --color-text-primary: #0a0a0b;
-  --color-text-secondary: #6b7280;
-  --color-text-muted: #9ca3af;
-  --color-text-inverse: #ffffff;
-
-  /* Dark mode colors */
-  --color-dark-background: #09090b;
-  --color-dark-surface: #111113;
-  --color-dark-border: #27272a;
-  --color-dark-text-primary: #fafafa;
-  --color-dark-text-secondary: #a1a1aa;
+  --color-paper: #FBFBF9;
+  --color-paper-subtle: #F4F3EE;
+  --color-paper-surface: #EDEBE3;
+  --color-paper-card: #FFFFFF;
+  --color-hairline: #E5E3DC;
+  --color-hairline-strong: #D5D2C7;
+  
+  --color-ink: #141413;
+  --color-ink-secondary: #4A4A45;
+  --color-ink-muted: #767670;
+  --color-ink-faint: #9E9D96;
+  
+  --color-navy: #0F2537;
+  --color-navy-hover: #1A3852;
+  --color-navy-soft: #F0F4F7;
+  --color-navy-border: #C8D6E2;
+  
+  /* Legacy wright blue mapped to institutional Navy */
+  --color-wright-blue: #0F2537;
+  --color-wright-blue-dark: #0A1B29;
+  --color-wright-blue-light: #F0F4F7;
+  
+  --color-background: #FBFBF9;
+  --color-surface: #F4F3EE;
+  --color-border: #E5E3DC;
+  --color-border-strong: #D5D2C7;
+  --color-text-primary: #141413;
+  --color-text-secondary: #4A4A45;
+  --color-text-muted: #767670;
+  --color-text-inverse: #FBFBF9;
 
   /* Typography */
+  --font-serif: var(--font-newsreader), "Newsreader", "Georgia", "Cambria", serif;
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: var(--font-geist-mono), "Fira Code", "Cascadia Code", monospace;
 
-  /* Spacing scale */
-  --spacing-section: 96px;
-  --spacing-container: 80px;
-
-  /* Radius */
-  --radius-card: 8px;
-  --radius-button: 6px;
-  --radius-badge: 4px;
+  /* Radius — disciplined, never bubbly */
+  --radius-card: 4px;
+  --radius-button: 3px;
+  --radius-badge: 2px;
 }
 
 /* Base */
@@ -44,80 +53,94 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  background-color: #FBFBF9;
 }
 
 body {
-  background-color: #ffffff;
-  color: #0a0a0b;
+  background-color: #FBFBF9;
+  color: #141413;
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Form controls — explicit colour values, crisp borders, and custom SVG indicator
-   prevent browser defaults and OS widgets from producing a washed-out white overlay. */
+/* Typography styles */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Form controls */
 select,
 textarea,
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
-  color: #0a0a0b;
-  background-color: #f7f8fa;
+  color: #141413;
+  background-color: #FFFFFF;
   color-scheme: light;
-  border-color: #d1d5db;
+  border: 1px solid #D5D2C7;
+  border-radius: 2px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: border-color 0.15s ease;
 }
 
-/* Custom select styling: appearance none with custom SVG chevron eliminates
-   the browser-native white overlay block and provides crisp cross-platform rendering */
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #0F2537;
+  box-shadow: none;
+}
+
 select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234A4A45' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-position: right 12px center;
   background-repeat: no-repeat;
-  background-size: 16px 16px;
+  background-size: 14px 14px;
   padding-right: 36px;
 }
 
-select:focus {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230165FC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-}
-
 select option {
-  background-color: #ffffff;
-  color: #0a0a0b;
+  background-color: #FFFFFF;
+  color: #141413;
   padding: 8px 12px;
 }
 
 select option:disabled {
-  color: #9ca3af;
+  color: #9E9D96;
 }
 
 ::placeholder {
-  color: #6b7280;
+  color: #9E9D96;
   opacity: 1;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #09090b;
-    color: #fafafa;
-  }
 }
 
 /* Selection */
 ::selection {
-  background-color: #0165FC;
-  color: #ffffff;
+  background-color: #0F2537;
+  color: #FBFBF9;
 }
 
 /* Focus */
 :focus-visible {
-  outline: 2px solid #0165FC;
+  outline: 2px solid #0F2537;
   outline-offset: 2px;
 }
 
@@ -130,16 +153,7 @@ select option:disabled {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #d1d5db;
-  border-radius: 3px;
-}
-
-/* Typography utilities */
-.text-balance {
-  text-wrap: balance;
-}
-.text-pretty {
-  text-wrap: pretty;
+  background-color: #D5D2C7;
 }
 
 /* Container */
@@ -161,50 +175,33 @@ select option:disabled {
 
 @media (min-width: 1280px) {
   .container-site {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 64px;
+    padding-right: 64px;
   }
 }
 
-/* Section spacing */
+/* Section spacing — generous, editorial whitespace */
 .section-spacing {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media (min-width: 768px) {
   .section-spacing {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
 }
 
-/* Divider line */
+/* Hairline dividers */
 .divider {
   height: 1px;
-  background-color: #e5e7eb;
+  background-color: #E5E3DC;
   width: 100%;
 }
 
-/* Mono text */
 .mono {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
 }
-
-/* Dashboard grid */
-.dashboard-grid {
-  display: grid;
-  gap: 1px;
-  background-color: #e5e7eb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.dashboard-cell {
-  background-color: #ffffff;
-  padding: 20px;
-}
-

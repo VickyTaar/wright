@@ -20,26 +20,26 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-[#0165FC] text-white hover:bg-[#0052d4] border border-transparent',
+    'bg-[#0F2537] text-[#FBFBF9] hover:bg-[#1A3852] border border-[#0F2537]',
   secondary:
-    'bg-[#f7f8fa] text-[#0a0a0b] hover:bg-[#e5e7eb] border border-[#e5e7eb]',
+    'bg-[#F4F3EE] text-[#141413] hover:bg-[#EDEBE3] border border-[#D5D2C7]',
   ghost:
-    'bg-transparent text-[#6b7280] hover:text-[#0a0a0b] hover:bg-[#f7f8fa] border border-transparent',
+    'bg-transparent text-[#4A4A45] hover:text-[#141413] hover:bg-[#F4F3EE] border border-transparent',
   outline:
-    'bg-transparent text-[#0165FC] hover:bg-[#e8f0fe] border border-[#0165FC]',
+    'bg-transparent text-[#0F2537] hover:bg-[#F0F4F7] border border-[#0F2537]',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'px-3.5 py-1.5 text-[13px]',
-  md: 'px-4 py-2 text-[14px]',
-  lg: 'px-5 py-2.5 text-[15px]',
+  sm: 'px-3.5 py-1.5 text-[13px] tracking-tight',
+  md: 'px-4 py-2.5 text-[14px] tracking-tight',
+  lg: 'px-6 py-3 text-[15px] tracking-tight',
 };
 
 export default function Button(props: ButtonProps) {
   const { variant = 'primary', size = 'md', className = '', children } = props;
 
   const base =
-    'inline-flex items-center justify-center font-medium rounded-[6px] transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0165FC] whitespace-nowrap';
+    'inline-flex items-center justify-center font-medium rounded-[2px] transition-colors duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F2537] whitespace-nowrap';
   const styles = `${base} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (props.href !== undefined) {

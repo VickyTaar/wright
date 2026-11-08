@@ -9,10 +9,10 @@ import Logo from '@/components/ui/Logo';
 const navLinks = [
   { label: 'Cyber Risk', href: '/platform' },
   { label: 'AI Assurance', href: '/ai' },
-  { label: 'Risk Index', href: '/risky-tech', badge: 'NEW' },
+  { label: 'Risk Index', href: '/risky-tech' },
   { label: 'Our Approach', href: '/security' },
   { label: 'Who We Serve', href: '/solutions' },
-  { label: 'Barbon CIA', href: '/cyber-insurance-academy', badge: 'NEW' },
+  { label: 'Barbon CIA', href: '/cyber-insurance-academy' },
   { label: 'Insights', href: '/resources' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -24,7 +24,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -43,90 +43,72 @@ export default function Navbar() {
   return (
     <header
       role="banner"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-[#e2e8f0]'
-          : 'bg-white/95 border-b border-[#f1f5f9]'
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 bg-[#FBFBF9] ${
+        scrolled ? 'border-b border-[#D5D2C7]' : 'border-b border-[#E5E3DC]'
       }`}
     >
       <div className="container-site">
         <nav
           aria-label="Main navigation"
-          className="flex items-center gap-4 h-16"
+          className="flex items-center justify-between h-18"
         >
-          {/* Logo — always visible, far left */}
+          {/* Brand mark */}
           <Link
             href="/"
-            aria-label="Barbon Insurance Technologies - Home"
-            className="flex items-center gap-2 shrink-0"
+            aria-label="Barbon - Technology Risk Intelligence"
+            className="flex items-center gap-2 shrink-0 py-2"
           >
-            <Logo size={32} />
+            <Logo size={24} />
           </Link>
 
-          {/* Spacer */}
-          <div className="flex-1" />
-
-          {/* Desktop Nav Links — centered pill */}
-          <div className="hidden xl:flex items-center gap-0.5 bg-[#f8fafc] border border-[#e2e8f0] rounded-full px-1.5 py-1.5">
+          {/* Desktop links */}
+          <div className="hidden xl:flex items-center gap-6">
             {navLinks.slice(0, 7).map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-2.5 py-1.5 text-[13px] font-medium transition-all duration-150 rounded-full flex items-center gap-1.5 whitespace-nowrap ${
+                  className={`text-[13.5px] transition-colors py-1.5 whitespace-nowrap ${
                     isActive
-                      ? 'bg-white text-[#0a0a0b] shadow-sm font-semibold'
-                      : 'text-[#64748b] hover:text-[#0f172a] hover:bg-white/70'
+                      ? 'text-[#141413] font-semibold border-b border-[#141413]'
+                      : 'text-[#52524E] hover:text-[#141413]'
                   }`}
                 >
                   {link.label}
-                  {link.badge && (
-                    <span className="px-1.5 py-0 text-[9px] font-extrabold tracking-wider text-white uppercase bg-[#0165FC] rounded-full leading-4">
-                      {link.badge}
-                    </span>
-                  )}
                 </Link>
               );
             })}
           </div>
 
-          {/* Medium screens: flat links */}
-          <div className="hidden md:flex xl:hidden items-center gap-1">
+          {/* Medium screen links */}
+          <div className="hidden md:flex xl:hidden items-center gap-5">
             {navLinks.slice(0, 5).map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1.5 text-[13px] font-medium rounded-lg transition-all whitespace-nowrap flex items-center gap-1.5 ${
+                  className={`text-[13px] transition-colors whitespace-nowrap ${
                     isActive
-                      ? 'text-[#0165FC] bg-[#e8f0fe] font-semibold'
-                      : 'text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]'
+                      ? 'text-[#141413] font-semibold border-b border-[#141413]'
+                      : 'text-[#52524E] hover:text-[#141413]'
                   }`}
                 >
                   {link.label}
-                  {link.badge && (
-                    <span className="px-1.5 py-0 text-[9px] font-extrabold tracking-wider text-white uppercase bg-[#0165FC] rounded-full leading-4">
-                      {link.badge}
-                    </span>
-                  )}
                 </Link>
               );
             })}
           </div>
 
-          {/* Spacer */}
-          <div className="flex-1" />
-
-          {/* Contact + CTA */}
-          <div className="hidden md:flex items-center gap-3 shrink-0 pr-2 md:pr-4 lg:pr-6">
+          {/* Right actions: Contact + Request a Briefing */}
+          <div className="hidden md:flex items-center gap-4 shrink-0">
             <Link
               href="/contact"
-              className={`px-3.5 py-2 text-[13.5px] font-medium rounded-lg transition-all whitespace-nowrap ${
+              className={`text-[13.5px] transition-colors ${
                 pathname === '/contact'
-                  ? 'text-[#0165FC] bg-[#e8f0fe]'
-                  : 'text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]'
+                  ? 'text-[#141413] font-semibold'
+                  : 'text-[#52524E] hover:text-[#141413]'
               }`}
             >
               Contact
@@ -134,67 +116,62 @@ export default function Navbar() {
             <Link
               href="/demo"
               id="nav-cta"
-              className="group inline-flex items-center gap-2 px-5 py-2.5 text-[13.5px] font-medium text-white bg-[#0165FC] hover:bg-[#0052d4] active:bg-[#003db5] rounded-full shadow-sm hover:shadow-md transition-all duration-200 whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-4 py-2 text-[13.5px] font-medium text-[#FBFBF9] bg-[#0F2537] hover:bg-[#1A3852] rounded-[2px] transition-colors whitespace-nowrap"
             >
               Request a Briefing
-              <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight size={13} aria-hidden="true" />
             </Link>
           </div>
 
-          {/* Mobile toggle */}
+          {/* Mobile hamburger */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-lg text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9] transition-colors shrink-0"
+            className="md:hidden p-2 text-[#52524E] hover:text-[#141413] transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </nav>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile drawer */}
       {menuOpen && (
         <div
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
-          aria-label="Navigation menu"
-          className="md:hidden fixed inset-0 top-16 bg-white z-40 flex flex-col overflow-y-auto"
+          aria-label="Mobile navigation"
+          className="md:hidden fixed inset-0 top-18 bg-[#FBFBF9] z-40 flex flex-col overflow-y-auto border-t border-[#E5E3DC]"
         >
-          <nav className="flex flex-col gap-1 p-5">
+          <nav className="flex flex-col p-6 space-y-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`flex items-center justify-between px-4 py-3 text-[15px] font-medium rounded-xl transition-all ${
+                  className={`py-3 text-[16px] transition-colors border-b border-[#F4F3EE] ${
                     isActive
-                      ? 'bg-[#e8f0fe] text-[#0165FC] font-semibold'
-                      : 'text-[#0f172a] hover:bg-[#f8fafc]'
+                      ? 'text-[#141413] font-semibold'
+                      : 'text-[#52524E]'
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
-                  <span>{link.label}</span>
-                  {link.badge && (
-                    <span className="px-2 py-0.5 text-[10px] font-extrabold tracking-wider text-white uppercase bg-[#0165FC] rounded-full">
-                      {link.badge}
-                    </span>
-                  )}
+                  {link.label}
                 </Link>
               );
             })}
-            <div className="mt-4 pt-4 border-t border-[#e2e8f0]">
+            <div className="pt-6">
               <Link
                 href="/demo"
-                className="flex items-center justify-center gap-2 w-full px-5 py-3.5 text-[15px] font-semibold text-white bg-gradient-to-r from-[#0165FC] to-[#0052d4] rounded-xl shadow-md"
+                className="flex items-center justify-center gap-2 w-full py-3.5 text-[15px] font-medium text-[#FBFBF9] bg-[#0F2537] hover:bg-[#1A3852] rounded-[2px] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 <span>Request a Briefing</span>
-                <ArrowRight size={16} />
+                <ArrowRight size={14} />
               </Link>
             </div>
           </nav>

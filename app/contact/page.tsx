@@ -29,43 +29,45 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main id="main-content">
-        <div className="pt-36 pb-16 bg-white border-b border-[#e5e7eb]">
+        {/* Header */}
+        <div className="pt-36 pb-16 bg-[#FBFBF9] border-b border-[#E5E3DC]">
           <div className="container-site">
-            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-5">
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[#767670] mb-4">
               Contact
             </p>
-            <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-6 max-w-2xl">
+            <h1 className="font-serif text-[42px] md:text-[54px] leading-[1.08] tracking-[-0.02em] text-[#141413] mb-5 max-w-2xl">
               Get in touch.
             </h1>
-            <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
+            <p className="text-[18px] text-[#52524E] leading-[1.75] max-w-xl">
               Reach out to our team for product questions, partnership enquiries,
               or technical discussions.
             </p>
           </div>
         </div>
 
-        <section className="section-spacing bg-[#f7f8fa]" aria-labelledby="contact-section-heading">
+        {/* Contact content */}
+        <section className="py-20 md:py-28 bg-[#FBFBF9]" aria-labelledby="contact-section-heading">
           <div className="container-site">
             <h2 id="contact-section-heading" className="sr-only">Contact details and form</h2>
             <div className="grid lg:grid-cols-2 gap-16 max-w-4xl">
               {/* Contact info */}
               <div>
-                <h3 className="text-[18px] font-semibold text-[#0a0a0b] mb-6">Contact details</h3>
-                <div className="space-y-4">
+                <h3 className="font-serif text-[20px] leading-[1.2] text-[#141413] mb-6">Contact details</h3>
+                <div className="divide-y divide-[#E5E3DC]">
                   {contactDetails.map((item) => (
-                    <div key={item.label} className="border border-[#e5e7eb] rounded-[6px] px-4 py-3 bg-white">
-                      <p className="text-[11px] text-[#9ca3af] mb-0.5">{item.label}</p>
+                    <div key={item.label} className="py-4">
+                      <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-[#767670] mb-1">{item.label}</p>
                       <a
                         href={item.href}
-                        className="text-[14px] font-medium text-[#0165FC] hover:text-[#0052d4] transition-colors"
+                        className="text-[15px] text-[#141413] hover:text-[#0F2537] transition-colors"
                       >
                         {item.value}
                       </a>
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 p-4 border border-[#e5e7eb] rounded-[6px] bg-white">
-                  <p className="text-[13px] text-[#6b7280] leading-[1.6]">
+                <div className="mt-8 pt-6 border-t border-[#E5E3DC]">
+                  <p className="text-[14px] text-[#52524E] leading-[1.65]">
                     We respond to all enquiries within one business day.
                     For urgent matters, please indicate this in your message subject.
                   </p>

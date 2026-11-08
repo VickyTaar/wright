@@ -1,20 +1,22 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import PlatformOverview from '@/components/sections/PlatformOverview';
-import Features from '@/components/sections/Features';
-import Integrations from '@/components/sections/Integrations';
-import CTA from '@/components/sections/CTA';
+import CyberRiskCapabilities from '@/components/sections/platform/CyberRiskCapabilities';
+import SignalSourcesDisplay from '@/components/sections/platform/SignalSourcesDisplay';
+import CTAEditorial from '@/components/sections/home/CTAEditorial';
 
 export const metadata: Metadata = {
-  title: 'Cyber Risk Intelligence - Barbon',
+  title: 'Cyber Risk Intelligence — Barbon',
   description:
-    'Barbon enables insurers to confidently issue and manage cyber insurance through continuous technical assessment, independent risk scoring, and real-time threat intelligence.',
+    'Barbon provides continuous technical cyber risk assessments and real-time underwriting telemetry — replacing annual questionnaires with an empirical, insurer-grade intelligence pipeline.',
   alternates: {
     canonical: 'https://barbon.tech/platform',
   },
   openGraph: {
     url: 'https://barbon.tech/platform',
+    title: 'Cyber Risk Intelligence — Barbon',
+    description:
+      'Continuous technical telemetry, explainable risk scoring, and independent control validation for confident cyber underwriting.',
   },
 };
 
@@ -23,29 +25,26 @@ export default function PlatformPage() {
     <>
       <Navbar />
       <main id="main-content">
-        {/* Page header */}
-        <div className="pt-32 pb-16 bg-white border-b border-[#e5e7eb]">
+        {/* Page Header */}
+        <div className="pt-32 pb-16 bg-[#FBFBF9] border-b border-[#E5E3DC]">
           <div className="container-site">
-            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#0165FC] mb-4">
-              Cyber Risk Intelligence
-            </p>
-            <h1 className="text-[40px] md:text-[52px] font-bold tracking-[-0.02em] leading-[1.05] text-[#0a0a0b] mb-5 max-w-2xl">
-              Continuous technical assessment
-              <br />
-              for cyber underwriting.
-            </h1>
-            <p className="text-[18px] text-[#6b7280] leading-[1.7] max-w-xl">
-              Barbon evaluates organizations throughout the policy lifecycle - not just at
-              renewal. Our platform continuously collects technical signals, scores cyber
-              risk, and delivers insurer-grade intelligence that supports confident
-              underwriting decisions.
-            </p>
+            <div className="max-w-3xl">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#767670] block mb-5">
+                Product · Cyber Risk Intelligence
+              </span>
+              <h1 className="text-[42px] sm:text-[52px] font-serif font-normal text-[#141413] tracking-[-0.025em] leading-[1.08] mb-5">
+                Continuous technical assessment for cyber underwriting.
+              </h1>
+              <p className="text-[17px] text-[#52524E] leading-[1.7] max-w-2xl">
+                Barbon evaluates organizations throughout the entire policy lifecycle — not just at renewal. We continuously collect technical telemetry, score cyber risk independently, and deliver structured underwriting intelligence that enables confident risk decisions without relying on self-attestation.
+              </p>
+            </div>
           </div>
         </div>
-        <PlatformOverview />
-        <Features />
-        <Integrations />
-        <CTA />
+
+        <CyberRiskCapabilities />
+        <SignalSourcesDisplay />
+        <CTAEditorial />
       </main>
       <Footer />
     </>

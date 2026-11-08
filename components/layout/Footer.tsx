@@ -4,17 +4,17 @@ import Logo from '@/components/ui/Logo';
 
 const footerNav = {
   services: {
-    label: 'Services',
+    label: 'Risk Intelligence',
     links: [
       { label: 'Cyber Risk Intelligence', href: '/platform' },
       { label: 'AI Risk Assurance', href: '/ai' },
       { label: 'Continuous Monitoring', href: '/platform#monitoring' },
       { label: 'Vendor Assurance', href: '/platform#vendor' },
-      { label: 'Underwriting Intelligence', href: '/platform#underwriting' },
+      { label: 'Underwriting Reports', href: '/platform#underwriting' },
     ],
   },
   for: {
-    label: 'For',
+    label: 'Who We Serve',
     links: [
       { label: 'Insurers & Underwriters', href: '/solutions#insurers' },
       { label: 'Brokers & MGAs', href: '/solutions#brokers' },
@@ -27,20 +27,20 @@ const footerNav = {
     label: 'Company',
     links: [
       { label: 'About Barbon', href: '/about' },
-      { label: 'Barbon CIA', href: '/cyber-insurance-academy' },
+      { label: 'Barbon CIA (Academy)', href: '/cyber-insurance-academy' },
       { label: 'Our Approach', href: '/security' },
-      { label: 'Insights', href: '/resources' },
+      { label: 'Barbon Risk Index', href: '/risky-tech' },
+      { label: 'Insights & Research', href: '/resources' },
       { label: 'Contact', href: '/contact' },
-      { label: 'Request a Briefing', href: '/demo' },
     ],
   },
   legal: {
-    label: 'Legal',
+    label: 'Legal & Standards',
     links: [
       { label: 'Privacy Policy', href: '/legal/privacy' },
       { label: 'Terms of Service', href: '/legal/terms' },
       { label: 'Cookie Policy', href: '/legal/cookies' },
-      { label: 'Data Processing', href: '/legal/dpa' },
+      { label: 'Data Processing Agreement', href: '/legal/dpa' },
     ],
   },
 };
@@ -49,61 +49,61 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer role="contentinfo" className="border-t border-[#e5e7eb] bg-white">
+    <footer role="contentinfo" className="border-t border-[#E5E3DC] bg-[#F4F3EE]">
       {/* Main footer content */}
-      <div className="container-site py-16">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12">
+      <div className="container-site py-16 md:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-10 lg:gap-14">
           {/* Brand column */}
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Logo size={32} />
+            <Link href="/" className="inline-block mb-4">
+              <Logo size={26} />
             </Link>
-            <p className="text-[14px] text-[#6b7280] leading-relaxed max-w-[240px] mb-6">
-              The technology intelligence layer between cybersecurity, AI, and insurance.
+            <p className="text-[14px] text-[#52524E] leading-relaxed max-w-[280px] mb-6">
+              The underwriting engine for cyber and AI risk. Partnering with insurers, reinsurers, brokers, and MGAs to pioneer cyber insurance across Africa and beyond.
             </p>
-            {/* Social links */}
-            <div className="flex items-center gap-3">
+            {/* Contact & Socials */}
+            <div className="flex flex-col gap-2 text-[13px] text-[#767670]">
+              <a
+                href="mailto:hello@barbon.tech"
+                className="hover:text-[#141413] transition-colors inline-flex items-center gap-2"
+              >
+                <Mail size={14} className="text-[#0F2537]" />
+                hello@barbon.tech
+              </a>
+              <a
+                href="tel:+25470696363"
+                className="hover:text-[#141413] transition-colors inline-flex items-center gap-2"
+              >
+                <Phone size={14} className="text-[#0F2537]" />
+                +254 706 963 63
+              </a>
               <a
                 href="https://linkedin.com/company/barbon-insurance-technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Barbon on LinkedIn"
-                className="p-2 text-[#9ca3af] hover:text-[#0165FC] transition-colors rounded-md hover:bg-[#f7f8fa]"
+                className="hover:text-[#141413] transition-colors mt-1 inline-flex items-center gap-2"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
                   <circle cx="4" cy="4" r="2"/>
                 </svg>
-              </a>
-              <a
-                href="mailto:hello@barbon.tech"
-                aria-label="Email Barbon"
-                className="p-2 text-[#9ca3af] hover:text-[#0165FC] transition-colors rounded-md hover:bg-[#f7f8fa]"
-              >
-                <Mail size={16} />
-              </a>
-              <a
-                href="tel:+25470696363"
-                aria-label="Call Barbon"
-                className="p-2 text-[#9ca3af] hover:text-[#0165FC] transition-colors rounded-md hover:bg-[#f7f8fa]"
-              >
-                <Phone size={16} />
+                LinkedIn
               </a>
             </div>
           </div>
 
-          {/* Nav columns */}
+          {/* Navigation columns */}
           {Object.values(footerNav).map((section) => (
             <div key={section.label} className="col-span-1">
-              <h3 className="text-[12px] font-semibold uppercase tracking-widest text-[#0a0a0b] mb-4">
+              <h3 className="text-[12px] font-mono uppercase tracking-wider text-[#141413] mb-4">
                 {section.label}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[14px] text-[#6b7280] hover:text-[#0a0a0b] transition-colors"
+                      className="text-[13.5px] text-[#52524E] hover:text-[#141413] transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -116,13 +116,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-[#e5e7eb]">
-        <div className="container-site py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[13px] text-[#9ca3af]">
-            © {currentYear} Barbon Insurance Technologies Ltd. All rights reserved.
+      <div className="border-t border-[#E5E3DC]">
+        <div className="container-site py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-[#767670]">
+          <p>
+            © {currentYear} Barbon Intelligent Technologies Ltd. All rights reserved.
           </p>
-          <p className="text-[13px] text-[#9ca3af]">
-            Technology Risk Intelligence for the Insurance Industry.
+          <p>
+            Independent Technology Risk Intelligence & Underwriting Telemetry.
           </p>
         </div>
       </div>

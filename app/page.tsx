@@ -1,28 +1,26 @@
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
-import TrustBar from '@/components/sections/TrustBar';
-import PlatformOverview from '@/components/sections/PlatformOverview';
-import RiskyTechHighlight from '@/components/sections/RiskyTechHighlight';
-import AISection from '@/components/sections/AISection';
-import DashboardSection from '@/components/sections/DashboardSection';
-import Features from '@/components/sections/Features';
-import Integrations from '@/components/sections/Integrations';
-import Security from '@/components/sections/Security';
-import Industries from '@/components/sections/Industries';
-import WhyBarbonOS from '@/components/sections/WhyBarbonOS';
-import CTA from '@/components/sections/CTA';
+import HeroEditorial from '@/components/sections/home/HeroEditorial';
+import PillarsEditorial from '@/components/sections/home/PillarsEditorial';
+import PipelineEditorial from '@/components/sections/home/PipelineEditorial';
+import ComparisonEditorial from '@/components/sections/home/ComparisonEditorial';
+import WhoWeServeEditorial from '@/components/sections/home/WhoWeServeEditorial';
+import TeasersEditorial from '@/components/sections/home/TeasersEditorial';
+import CTAEditorial from '@/components/sections/home/CTAEditorial';
 
 export const metadata: Metadata = {
-  title: 'Barbon - Technology Risk Intelligence for Insurance',
+  title: 'Barbon — The Underwriting Engine for Cyber Risk',
   description:
-    'Barbon enables insurers to confidently underwrite cyber and AI risks through continuous technical assessment, real-time risk intelligence, and independent validation. We make technology risk measurable.',
+    'Barbon continuously measures cyber and AI risk — providing insurers, reinsurers, and brokers with independent, insurer-grade telemetry to underwrite modern technology with confidence. Pioneering cyber insurance in Africa.',
   alternates: {
     canonical: 'https://barbon.tech',
   },
   openGraph: {
     url: 'https://barbon.tech',
+    title: 'Barbon — The Underwriting Engine for Cyber Risk',
+    description:
+      'Continuous technical assessment, explainable risk scoring, and real-time loss prevention telemetry for cyber insurance underwriting.',
   },
 };
 
@@ -31,18 +29,13 @@ export default function HomePage() {
     <>
       <Navbar />
       <main id="main-content">
-        <Hero />
-        <TrustBar />
-        <PlatformOverview />
-        <RiskyTechHighlight />
-        <AISection />
-        <DashboardSection />
-        <Features />
-        <Integrations />
-        <Security />
-        <Industries />
-        <WhyBarbonOS />
-        <CTA />
+        <HeroEditorial />
+        <PillarsEditorial />
+        <PipelineEditorial />
+        <ComparisonEditorial />
+        <WhoWeServeEditorial />
+        <TeasersEditorial />
+        <CTAEditorial />
       </main>
       <Footer />
     </>

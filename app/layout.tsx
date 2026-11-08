@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Newsreader, Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -105,7 +112,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${newsreader.variable} ${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -158,7 +165,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col antialiased bg-[#FBFBF9] text-[#141413] selection:bg-[#0F2537] selection:text-[#FBFBF9]">
         {/* GTM noscript fallback — must be immediately after <body> open */}
         <noscript>
           <iframe
@@ -173,7 +180,7 @@ export default function RootLayout({
         {/* Skip to main content — accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#0165FC] focus:text-white focus:rounded-[6px] focus:text-[14px] focus:font-medium focus:outline-none focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#0F2537] focus:text-[#FBFBF9] focus:text-[14px] focus:font-medium focus:outline-none"
         >
           Skip to main content
         </a>
